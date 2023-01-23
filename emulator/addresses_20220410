@@ -1,0 +1,7 @@
+_base	08020000	
+_sbss   2000353c
+_ebss   2001124c
+_sdata  20000000
+_edata  2000353c
+_sidata 08079020
+_estack 20030000

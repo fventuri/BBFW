@@ -1,0 +1,5 @@
+Reset_Handler   = 0x8030a2d;
+Default_Handler = 0x8030a7d;
+
+bbfw_snprintf   = 0x8033b55;
+/* bbfw_sprintf    = 0x???????; */
