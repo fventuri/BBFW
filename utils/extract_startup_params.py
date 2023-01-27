@@ -9,6 +9,25 @@ import re
 import sys
 
 
+def is_BL(hw0, hw1):
+    return hw0 & 0xf800 == 0xf000 and hw1 & 0xd000 == 0xd000
+
+def decode_BL(hw0, hw1, addr):
+    # see Armv7-M Architecture Reference Manual (DDI0403E) - A7.7.18 (A7-213)
+    s = (hw0 & 0x0400) >> 10
+    imm10 = hw0 & 0x03ff
+    j1 = (hw1 & 0x2000) >> 13
+    j2 = (hw1 & 0x0800) >> 11
+    imm11 = hw1 & 0x07ff
+    i1 = ~(j1 ^ s) & 0x1
+    i2 = ~(j2 ^ s) & 0x1
+    offset = i1 << 23 | i2 << 22 | imm10 << 12 | imm11 << 1
+    if s == 1:
+        offset = -1 - (offset ^ 0x00ffffff)
+    new_addr = addr + offset + 4
+    return new_addr
+
+
 base_address = 0x08020000
 startup_file = 'startup_stm32f4xxxx.s'
 opts, args = getopt.getopt(sys.argv[1:], 'b:s:')
@@ -52,8 +71,8 @@ with open(startup_file, 'r') as f:
                 address = value & ~0x1
                 if address >= base_address and address < end_address:
                     fw_pos1 = address - base_address
-                    instr = struct.unpack('>H', fw[fw_pos1:fw_pos1+2])[0]
-                    if instr == 0xfee7:   # while(1) {} -> Default_Handler
+                    instr = struct.unpack('<H', fw[fw_pos1:fw_pos1+2])[0]
+                    if instr == 0xe7fe:   # while(1) {} -> Default_Handler
                         default_handler = value
                 if value != default_handler:
                     print(f'{name}\t{value:08x}')
@@ -70,10 +89,14 @@ if reset_handler is not None:
     fw_pos = address - base_address
     # look for the end of Reset_Handler
     while fw_pos < end_address - base_address:
-        instr = struct.unpack('>H', fw[fw_pos:fw_pos+2])[0]
-        fw_pos += 2
-        if instr == 0xfee7:   # while(1) {} -> end of Reset_Handler
+        instr = struct.unpack('<H', fw[fw_pos:fw_pos+2])[0]
+        if instr == 0xe7fe:   # while(1) {} -> end of Reset_Handler
             break
+        fw_pos += 2
+    # save the previous six instructions to see if they are BLs to well known
+    # functions
+    pinstrs_pos = fw_pos - 12
+    pinstrs = struct.unpack('<HHHHHH', fw[pinstrs_pos:pinstrs_pos+12])
     # align address to word boundary
     if fw_pos % 4 == 2:
         fw_pos += 2
@@ -81,3 +104,14 @@ if reset_handler is not None:
         value = struct.unpack('<I', fw[fw_pos:fw_pos+4])[0]
         print(f'{name}\t{value:08x}')
         fw_pos += 4
+    # check if the previous six instructions in Reset_handler are BLs
+    if (is_BL(pinstrs[0], pinstrs[1]) and is_BL(pinstrs[2], pinstrs[3]) and
+        is_BL(pinstrs[4], pinstrs[5])):
+        bl_address = base_address + pinstrs_pos
+        # set the last bit to 1 for Thumb instructions
+        system_init_address = decode_BL(pinstrs[0], pinstrs[1], bl_address) | 0x1
+        libc_init_array_address = decode_BL(pinstrs[2], pinstrs[3], bl_address + 4) | 0x1
+        main_address = decode_BL(pinstrs[4], pinstrs[5], bl_address + 8) | 0x1
+        print(f'SystemInit\t{system_init_address:08x}')
+        print(f'__libc_init_array\t{libc_init_array_address:08x}')
+        print(f'main\t{main_address:08x}')
