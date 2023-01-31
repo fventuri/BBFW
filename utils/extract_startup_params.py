@@ -30,14 +30,18 @@ def decode_BL(hw0, hw1, addr):
 
 base_address = 0x08020000
 startup_file = 'startup_stm32f4xxxx.s'
-opts, args = getopt.getopt(sys.argv[1:], 'b:s:')
+radare2 = False
+opts, args = getopt.getopt(sys.argv[1:], 'b:s:r')
 for o, a in opts:
     if o == '-b':
         base_address = int(a, 0)
     elif o == '-s':
         startup_file = a
+    elif o == '-r':
+        radare2 = True
 
-with open(args[0], 'rb') as f:
+filename = args[0]
+with open(filename, 'rb') as f:
     fw = f.read()
 
 end_address = base_address + len(fw)
@@ -45,7 +49,16 @@ end_address = base_address + len(fw)
 reset_handler = None
 default_handler = None
 
-print(f'_base\t{base_address:08x}')
+if radare2:
+    print('# load the image')
+    print(f'f _base = 0x{base_address:08x}')
+    print(f'o {filename} _base rx')
+    print(f'omn _base flash')
+    print()
+    print('# IVT functions')
+    print('fs symbols')
+else:
+    print(f'_base\t{base_address:08x}')
 
 parse_line = re.compile(r'\s+(\.\S+)\s+(\S+)')
 skip_line = True
@@ -75,13 +88,26 @@ with open(startup_file, 'r') as f:
                     if instr == 0xe7fe:   # while(1) {} -> Default_Handler
                         default_handler = value
                 if value != default_handler:
-                    print(f'{name}\t{value:08x}')
+                    if radare2:
+                        if name != '_estack':
+                            print(f'f sym.{name} = 0x{address:08x}')
+                    else:
+                        print(f'{name}\t{value:08x}')
                 if name == 'Reset_Handler':
                     reset_handler = value
             fw_pos += 4
 
 if default_handler is not None:
-    print(f'Default_Handler\t{default_handler:08x}')
+    if radare2:
+        address = default_handler & ~0x1
+        print(f'f sym.Default_Handler = 0x{address:08x}')
+    else:
+        print(f'Default_Handler\t{default_handler:08x}')
+
+if radare2:
+    print()
+    print('# useful memory addresses')
+    print('fs *')
 
 # extract some more information from Reset_Handler
 if reset_handler is not None:
@@ -102,16 +128,31 @@ if reset_handler is not None:
         fw_pos += 2
     for name in ['_estack', '_sdata', '_edata', '_sidata', '_sbss', '_ebss']:
         value = struct.unpack('<I', fw[fw_pos:fw_pos+4])[0]
-        print(f'{name}\t{value:08x}')
+        if radare2:
+            print(f'f {name} = 0x{value:08x}')
+        else:
+            print(f'{name}\t{value:08x}')
         fw_pos += 4
     # check if the previous six instructions in Reset_handler are BLs
     if (is_BL(pinstrs[0], pinstrs[1]) and is_BL(pinstrs[2], pinstrs[3]) and
         is_BL(pinstrs[4], pinstrs[5])):
         bl_address = base_address + pinstrs_pos
-        # set the last bit to 1 for Thumb instructions
-        system_init_address = decode_BL(pinstrs[0], pinstrs[1], bl_address) | 0x1
-        libc_init_array_address = decode_BL(pinstrs[2], pinstrs[3], bl_address + 4) | 0x1
-        main_address = decode_BL(pinstrs[4], pinstrs[5], bl_address + 8) | 0x1
-        print(f'SystemInit\t{system_init_address:08x}')
-        print(f'__libc_init_array\t{libc_init_array_address:08x}')
-        print(f'main\t{main_address:08x}')
+        system_init_address = decode_BL(pinstrs[0], pinstrs[1], bl_address)
+        libc_init_array_address = decode_BL(pinstrs[2], pinstrs[3], bl_address + 4)
+        main_address = decode_BL(pinstrs[4], pinstrs[5], bl_address + 8)
+        if radare2:
+            print()
+            print('# more functions from Reset_Handler')
+            print('fs symbols')
+            print(f'f sym.SystemInit = 0x{system_init_address:08x}')
+            print(f'f sym.__libc_init_array = 0x{libc_init_array_address:08x}')
+            print(f'f sym.main = 0x{main_address:08x}')
+        else:
+            # set the last bit to 1 for Thumb instructions
+            print(f'SystemInit\t{system_init_address | 0x1:08x}')
+            print(f'__libc_init_array\t{libc_init_array_address | 0x1:08x}')
+            print(f'main\t{main_address | 0x1:08x}')
+
+if radare2:
+    print()
+    print(f's _base')

@@ -1,0 +1,454 @@
+{
+  "080201f0": {
+    "Name": "arm_bitreversal_32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.5.0.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a"
+  },
+  "0802036c": {
+    "Name": "__aeabi_dadd",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "080205e4": {
+    "Name": "__aeabi_ui2d",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020604": {
+    "Name": "__aeabi_ui2d",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020628": {
+    "Name": "__aeabi_f2d",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "080206d8": {
+    "Name": "__aeabi_dmul",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "0802092c": {
+    "Name": "__aeabi_dmul",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020b0c": {
+    "Name": "__eqdf2",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020c0c": {
+    "Name": "__aeabi_dcmpun",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020c38": {
+    "Name": "__aeabi_d2iz",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020c88": {
+    "Name": "__aeabi_d2uiz",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020d68": {
+    "Name": "__aeabi_uldivmod",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a"
+  },
+  "08020d98": {
+    "Name": "__udivmoddi4",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a"
+  },
+  "08022244": {
+    "Name": "_HTTPServer_sleepms",
+    "Filename": "/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a"
+  },
+  "08023bf0": {
+    "Name": "__kernel_rem_pio2",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib/rtsv7A8_T_le_n_v3_eabi.lib"
+  },
+  "08027fac": {
+    "Name": "arm_fir_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a"
+  },
+  "08028380": {
+    "Name": "arm_fir_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a"
+  },
+  "08028e88": {
+    "Name": "arm_fir_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a"
+  },
+  "0802a658": {
+    "Name": "GUI_GetBkColor",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/Keil.STM32F4xx_DFP.2.2.0.pack/Middlewares/ST/STemWin/Lib/STemWin524b_CM4_GCC_ot.a"
+  },
+  "0802a668": {
+    "Name": "_HTTPServer_sleepms",
+    "Filename": "/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a"
+  },
+  "0802a920": {
+    "Name": "IS_BIT_SET",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/middleware/MTK/camera/lib/libdrv_idp.a"
+  },
+  "0802ab70": {
+    "Name": "OSMboxPostOpt",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/EmbeddedOffice.Flexible_Safety_RTOS.1.0.0.pack/Lib/cortex-m4f_gcc/cert-mpu_cortex-m4f_gcc.a"
+  },
+  "0802f0d0": {
+    "Name": "fdopen",
+    "Filename": "/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a"
+  },
+  "0802f114": {
+    "Name": "fdopen",
+    "Filename": "/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a"
+  },
+  "08030248": {
+    "Name": "_ZN10JSAPI_GPIO9JiggleLowEjj",
+    "Filename": "/opt/symgrate2-archive/imagecraft/iccv9cortex/bin/ImageCraftCB/share/CodeBlocks/templates/wizard/icc-jsapi-templates/JumpStart_STM32F3xx-Template/Files/bin/Debug/JumpStart_STM32F3xx.elf"
+  },
+  "08032dd8": {
+    "Name": "arm_fill_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08032e14": {
+    "Name": "arm_copy_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08032e74": {
+    "Name": "arm_min_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08032f44": {
+    "Name": "arm_cfft_radix8by2_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "080330e8": {
+    "Name": "arm_cfft_radix8by4_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "080335a4": {
+    "Name": "arm_cfft_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08033698": {
+    "Name": "arm_fir_interpolate_init_q31",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a"
+  },
+  "080336d0": {
+    "Name": "arm_fir_interpolate_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08033b08": {
+    "Name": "arm_fir_init_q31",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08033b2c": {
+    "Name": "arm_fir_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08033ff4": {
+    "Name": "arm_fir_decimate_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "0803436c": {
+    "Name": "arm_biquad_cascade_df1_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "0803450c": {
+    "Name": "arm_cmplx_mag_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "080346dc": {
+    "Name": "arm_sin_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.5.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08034764": {
+    "Name": "arm_cos_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "080347e4": {
+    "Name": "arm_scale_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08034850": {
+    "Name": "arm_radix8_butterfly_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a"
+  },
+  "08034e20": {
+    "Name": "__libc_init_array",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08034e68": {
+    "Name": "memcpy",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08034e8e": {
+    "Name": "__cvt",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08034f50": {
+    "Name": "__exponent",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/hard/libc_nano.a"
+  },
+  "08034fb8": {
+    "Name": "_printf_float",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08035438": {
+    "Name": "_printf_common",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08035524": {
+    "Name": "_printf_i",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08035b0c": {
+    "Name": "iprintf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a"
+  },
+  "08035c04": {
+    "Name": "setvbuf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08035d6c": {
+    "Name": "sniprintf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08035dd4": {
+    "Name": "siprintf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08035e14": {
+    "Name": "sulp",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a"
+  },
+  "08036a38": {
+    "Name": "strptime",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08036a58": {
+    "Name": "_strtoul_l.isra.0",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08036b50": {
+    "Name": "strftime",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a"
+  },
+  "08036b74": {
+    "Name": "__swbuf_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08036c18": {
+    "Name": "__swsetup_r",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08036cf4": {
+    "Name": "quorem",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08036e10": {
+    "Name": "_dtoa_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08037a8c": {
+    "Name": "_fflush_unlocked_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08037ae0": {
+    "Name": "std",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08037b34": {
+    "Name": "__sfmoreglue",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08037b60": {
+    "Name": "__sinit",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a"
+  },
+  "08037bc0": {
+    "Name": "__sfp",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08037c74": {
+    "Name": "rshift",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08037ce8": {
+    "Name": "__hexdig_fun",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08037d12": {
+    "Name": "__gethex",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038154": {
+    "Name": "L_shift",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08038178": {
+    "Name": "__match",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "080381a0": {
+    "Name": "__hexnan",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080382cc": {
+    "Name": "_localeconv_r",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a"
+  },
+  "080382e8": {
+    "Name": "__swhatbuf_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038330": {
+    "Name": "__smakebuf_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "080383e4": {
+    "Name": "_Balloc",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "0803844c": {
+    "Name": "_Bfree",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "0803847a": {
+    "Name": "__multadd",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080384f0": {
+    "Name": "__s2b",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "0803856c": {
+    "Name": "__hi0bits",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc.a"
+  },
+  "080385aa": {
+    "Name": "__lo0bits",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038608": {
+    "Name": "__i2b",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7-m/libc.a"
+  },
+  "0803861a": {
+    "Name": "__multiply",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038748": {
+    "Name": "__pow5mult",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080387e4": {
+    "Name": "__lshift",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "0803888c": {
+    "Name": "__mcmp",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080388c0": {
+    "Name": "__mdiff",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "0803897c": {
+    "Name": "__ulp",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080389cc": {
+    "Name": "__b2d",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038a68": {
+    "Name": "__d2b",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038b06": {
+    "Name": "__ratio",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038b6c": {
+    "Name": "__copybits",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08038ba0": {
+    "Name": "__any_on",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08038be2": {
+    "Name": "_calloc_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08038c00": {
+    "Name": "_free_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038c9c": {
+    "Name": "_malloc_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08038d50": {
+    "Name": "__ssputs_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08038ff4": {
+    "Name": "__sfputc_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08039022": {
+    "Name": "__sfputs_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08039274": {
+    "Name": "_close_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "0803931a": {
+    "Name": "strncmp",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "0803939c": {
+    "Name": "_fstat_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080393c0": {
+    "Name": "_close_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080393e0": {
+    "Name": "_execve_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "08039404": {
+    "Name": "memmove",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "0803943a": {
+    "Name": "_realloc_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a"
+  },
+  "08039488": {
+    "Name": "_execve_r",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "080399fc": {
+    "Name": "acosf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs610/ccsv6/tools/compiler/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/lib/armv7-ar/thumb/fpu/libm.a"
+  },
+  "0803a4e0": {
+    "Name": "arm_fir_f32",
+    "Filename": "/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a"
+  },
+  "0803a9e4": {
+    "Name": "__kernel_sinf",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a"
+  },
+  "0803aa86": {
+    "Name": "finitef",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7e-m/fpu/libc.a"
+  },
+  "0803ab50": {
+    "Name": "scalbnf",
+    "Filename": "/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a"
+  },
+  "0803ac10": {
+    "Name": "nextafterf",
+    "Filename": "/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libm.a"
+  }
+}
