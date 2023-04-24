@@ -1,7 +1,7 @@
 # Utilities
 
 ## extract_startup_params
-Extracts parameters (IVT and important memory addresses) from startup function
+Extracts parameters (IVT and important memory addresses) from a firmware file based on a startup function (for example: [startup_stm32f427xx.s](https://github.com/STMicroelectronics/STM32CubeF4/tree/master/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f427xx.s))
 
 To create a load file for r2:
 ```
