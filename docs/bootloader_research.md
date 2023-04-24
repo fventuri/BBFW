@@ -1,0 +1,23 @@
+# Bootloader work
+ - [Xiegu G90 - reflashing Bootloader into Front panel microcontroller](https://radioamateur8.rssing.com/chan-37165509/all_p7.html) (YO3HJV, 12/2020) _Replacing/de-soldering a Xiegu G90's disp unit STM32F1 SoC with a new one, then flashing new bootloader+firmware to it (including [SWD pinout](https://github.com/yo3hjv/XIEGU-G90/wiki))._
+ - [G90 Tools](https://github.com/OpenHamradioFirmware/G90Tools#bootloader-extraction) and a related [blog post](https://radiochief.ru/radio/protsedura-izvlecheniya-bootloader-iz-xiegu-g90/) using these instructions
+
+### Read-out protection (RDP) documentation
+"The flash readout protection concept consists of three selectable RDP Levels 0, 1 and 2. The protection increases with the level.
+ - RDP Level 0 is the original configuration and imposes no restrictions. The debug interface is active and allows full access to the device. Usually, this level is only used for development.
+ - RDP Level 1 keeps the debug interface active but restricts access to flash memory. As soon as a **debugger** is connected, **flash memory** is locked. It can neither be read out directly nor indirectly via DMA nor is the CPU able to execute code from it. Protection can be upgraded to RDP Level 2 but can also be downgraded to RDP Level 0 at the cost of losing all flash memory contents.
+ - RDP Level 2 is restricted the most and provides highest security. Debug access is completely disabled by shutting down the debug interface permanently. The level is irreversible and cannot be downgraded.
+
+Despite RDP Level 2 offers the best protection, RDP Level 1 is still in use. Experience shows, that companies dislike the idea of locking down their devices completely, since it impedes fixing buggy and failed devices. Furthermore, ST warns in their datasheet, that defective part analysis cannot be done on devices set to RDP Level 2. Additionally, the STM32F1 series, for example, lacks support for RDP Level 2. Altogether, this results in devices set to RDP Level 1.
+
+The RDP level is part of the microcontroller’s system configuration, stored in the dedicated _option byte_ section. Therein, the available three RDP levels are encoded using 16 bits of non-volatile memory" _[Shedding too much Light on a Microcontroller’s Firmware Protection, 2.1 Flash Readout Protection Levels, p2](https://www.aisec.fraunhofer.de/content/dam/aisec/ResearchExcellence/woot17-paper-obermaier.pdf)_
+
+"Level 1 is the default read protection level. ... The read protection Level 1 is activated by writing any value (except for 0xAA and 0xCC used to set Level 0 and Level 2, respectively) into the RDP option byte. When the read protection Level 1 is set:
+ - No access (read, erase, program) to Flash memory can be performed while the **debug** feature is connected or while booting from RAM or system memory bootloader. A bus error is generated in case of read request.
+ - **When booting from Flash memory, accesses (read, erase, program) to Flash memory from user code are allowed.**
+
+When Level 1 is active, programming the protection option byte (RDP) to Level 0 causes the Flash memory to be mass-erased. As a result the user code area is cleared before the read protection is removed. The mass erase only erases the user code area. The other option bytes including write protections remain unchanged from before the mass-erase operation. The OTP area is not affected by mass erase and remains unchanged. Mass erase is performed only when Level 1 is active and Level 0 requested. When the protection level is increased (0->1, 1->2, 0->2) there is no mass erase."
+_[STM32World Wiki: STM32 Readout Protection (RDP)](https://stm32world.com/wiki/STM32_Readout_Protection_(RDP))_
+
+### Possible RDP circumvention
+Note that the STM32 read/erase/programming functions are not locked down while booting from **flash memory**, just when a debugger is active (or while booting from RAM or system memory).  This is important because it means we could write a custom firmware (to encrypt, load into flash memory, and have the bootloader decrypt) which copies the lower flash memory addresses 0x08000000-0x08020000 (where the bootloader lives) into somewhere else (like maybe RAM, which is 0x30000 long). After the bootloader was copied to a place that is not locked-down by RDP, we could then attach a debugger to copy the bootloader from that unprotected area.  PoC is in the G90 [bootloader extraction](https://github.com/OpenHamradioFirmware/G90Tools/blob/18ba0e5a8c45a48578e0a0b0f892ac6ef0dbcf2f/extract_bl_main/main.c) 'trojan' firmware.  This should be do-able on x6100 as well.
