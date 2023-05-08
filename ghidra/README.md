@@ -1,5 +1,5 @@
 ## Importing/running Ghidra scripts
- 1. Download the ghidra scripts you want to use (they should be .java or .py files). Some useful scripts for reversing STM32 firmware include [symgrate](https://github.com/symgrate/symgrate-ghidra) (to match function signatures) & [SVD Loader](https://github.com/leveldown-security/SVD-Loader-Ghidra) (to create the STM32's memory map in Ghidra).
+ 1. Download the ghidra scripts you want to use (they should be .java or .py files). Some useful scripts for reversing STM32 firmware include [symgrate](https://github.com/jamchamb/symgrate-ghidra) (to match function signatures) & [SVD Loader](https://github.com/leveldown-security/SVD-Loader-Ghidra) (to create the STM32's memory map in Ghidra).
  2. Go to Ghidra > Code Browser (dragon button) > "Window" (tab) > "Script Manager" (green circle 'play' button) > "Manage Script Directories" (three horizontal lines button) > "Display file chooser to add bundles to list" (green plus button).
  3. Now find/select the directory holding your ghidra script, press "OK", then close the window.
  4. Search for your script in the left or main windows under "Filter:" (for example, to find Ghidra's built-in address/function exporter script, type "export"). Select your script by clicking on it, then click "Run Script" (green 'play' button).
