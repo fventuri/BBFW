@@ -25,61 +25,56 @@
 08020368	,__aeabi_dsub_g_	,symgrate	,
 0802036c	,__aeabi_dadd_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 080205e4	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-080205ee	,UNKNOWN	,	,Probably just part of 080205e4 __aeabi_ui2d
 08020604	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-0802060e	,UNKNOWN	,	,
 08020628	,__aeabi_f2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 0802066c	,__aeabi_ul2d_g_	,symgrate	,
-08020674	,UNKNOWN	,	,
 0802067c	,__aeabi_l2d_g_	,symgrate	,
-08020684	,UNKNOWN	,	,
 080206d8	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-080208b4	,UNKNOWN	,	,
+080208b4	,sub__aeabi_dmul:080206f4_g_	,nu	,Is only called by __aeabi_dmul:080206f4
 0802092c	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020a9a	,UNKNOWN	,	,
+08020a9a	,sub__aeabi_dmul:08020948_g_	,nu	,Is only called by __aeabi_dmul:08020948
 08020b0c	,__eqdf2_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 08020b88	,__aeabi_cdrcmple_g_	,symgrate	,
 08020b98	,__aeabi_cdcmple_g_	,symgrate	,
-08020ba8	,UNKNOWN	,	,
-08020bbc	,UNKNOWN	,	,
-08020bd0	,UNKNOWN	,	,
-08020be4	,UNKNOWN	,	,
-08020bf8	,UNKNOWN	,	,
+08020ba8	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
+08020bbc	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
+08020bd0	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
+08020be4	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something
+08020bf8	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something
 08020c0c	,__aeabi_dcmpun_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 08020c38	,__aeabi_d2iz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 08020c88	,__aeabi_d2uiz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 08020cc8	,UNKNOWN	,	,
 08020d68	,__aeabi_uldivmod_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
 08020d98	,__udivmoddi4_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
-08021064	,UNKNOWN	,	,
 08021068	,SQRT_g_	,fventuri	,
-0802108c	,UNKNOWN	,	,
+0802108c	,sub1_FUN_08022710	,nu	,Only used by FUN_08022710
 080210a8	,ATAN2_DEGREES_g_	,fventuri	,
-08021188	,UNKNOWN	,	,
-080211a8	,UNKNOWN	,	,
-08021200	,UNKNOWN	,	,
-0802129c	,UNKNOWN	,	,
-08021338	,UNKNOWN	,	,
-08021390	,UNKNOWN	,	,
-080213ec	,UNKNOWN	,	,
-0802148c	,UNKNOWN	,	,
-080214e0	,UNKNOWN	,	,
-0802166c	,UNKNOWN	,	,
-080216f8	,UNKNOWN	,	,
-080219f4	,UNKNOWN	,	,
-08021a58	,UNKNOWN	,	,
-08021ac8	,UNKNOWN	,	,
-08021e28	,UNKNOWN	,	,
-08021e70	,UNKNOWN	,	,
-08021fd0	,UNKNOWN	,	,
-080221ec	,UNKNOWN	,	,
-08022244	,_HTTPServer_sleepms_g_	,symgrate	,/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a
-0802252c	,UNKNOWN	,	,
-08022658	,UNKNOWN	,	,
-08022684	,add1.0AndStoreInSRAM9c40_g_	,nu	,
-08022698	,UNKNOWN	,	,
-08022710	,UNKNOWN	,	,
-080230a4	,changeSRAM5910[0x4d92]from0to4_thenwait100_g_	,nu	,If SRAM5910[4d92] is 0 then set it to 4 and wait 100ms (exit loop early if SRAM5910[4d92] gets set back to 0).
+08021188	,sub2_FUN_08022710	,nu	,Only used by FUN_08022710
+080211a8	,sub3_FUN_08022710	,nu	,Only used by FUN_08022710
+08021200	,sub4_FUN_08022710	,nu	,Only used by FUN_08022710
+0802129c	,sub5_FUN_08022710	,nu	,Only used by FUN_08022710
+08021338	,sub6_FUN_08022710	,nu	,Only used by FUN_08022710
+08021390	,sub7_FUN_08022710	,nu	,Only used by FUN_08022710
+080213ec	,sub8_FUN_08022710	,nu	,Only used by FUN_08022710
+0802148c	,sub9_FUN_08022710	,nu	,Only used by FUN_08022710. Called twice.
+080214e0	,UNKNOWN	,	,Only called by DMA1_Stream3_IRQHandler_f_ & FUN_08022710. Called multiple times by both.
+0802166c	,sub10_FUN_08022710	,nu	,Only used by FUN_08022710: Stores/processes data in SRAM (input is either SRAM9294 or SRAM942C or SRAM9aa8)
+080216f8	,sub11_FUN_08022710	,nu	,Only used by FUN_08022710
+080219f4	,sub12_FUN_08022710	,nu	,Only used by FUN_08022710
+08021a58	,sub13_FUN_08022710	,nu	,Only used by FUN_08022710
+08021ac8	,sub_DMA1_Stream3_IRQHandler	,nu	,Only used by DMA1_Stream3_IRQHandler_f_
+08021e28	,sub14_FUN_08022710	,nu	,Only used by FUN_08022710
+08021e70	,sub15_FUN_08022710	,nu	,Only used by FUN_08022710
+08021fd0	,sub16_FUN_08022710	,nu	,Only used by FUN_08022710
+080221ec	,sub17_FUN_08022710	,nu	,Only used by FUN_08022710
+08022244	,_HTTPServer_sleepms_g_	,symgrate	,Only called by DMA1_Stream3_IRQHandler_f_.  /opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a
+0802252c	,sub18_FUN_08022710	,nu	,Only used by FUN_08022710
+08022658	,sub_FUN_08032108	,nu	,Only used by FUN_08032108
+08022684	,add1.0AndStoreInSRAM9c40_g_	,nu	,Only used by FUN_0802afa4
+08022698	,UNKNOWN	,	,Only used by FUN_0802afa4
+08022710	,UNKNOWN	,	,Stores a ton of stuff in a large array in SRAM5910. Only used by GPIO_EG_DataRegisters_I2cStuff_g_:08023b86
+080230a4	,changeSRAM5910[0x4d92]from0to4_thenwait100_g_	,nu	,Only used by FUN_0802afa4.  If SRAM5910[4d92] is 0 then set it to 4 and wait 100ms (exit loop early if SRAM5910[4d92] gets set back to 0).
 080230dc	,return_g_	,nu	,
 080230e0	,storeInSRAM5910array[0x8148]_OrZeroSRAM5910[0x4d5d-0x4d5e]_g_	,nu	,If input is 0 then zero SRAM5910[0x4d5d] & SRAM5910[0x4d5e]. Otherwise store the input into SRAM5910array[0x8148]
 080230fc	,UNKNOWN	,	,stores stuff in SRAM
@@ -107,7 +102,6 @@
 08023a28	,storeInSRAM5910array[0x4d61]	,nu	,
 08023a38	,storeInSRAM5910array[0x4d63]	,nu	,
 08023a48	,UNKNOWN	,	,
-08023ad6	,UNKNOWN	,	,
 08023ae4	,storeInSRAM5910+0x4d70_akaSRAMa680	,nu	,
 08023af4	,storeInSRAM5910array[0x4d90]	,nu	,
 08023b04	,storeInSRAM5910array[0x4ddc]	,nu	,
@@ -130,7 +124,7 @@
 080295f0	,UNKNOWN	,	,SRAMe1a8array might be a jump table
 080296b4	,compareSRAMe1a8_GPIOregisterValsMaybe_g_	,nu	,Similar to FUN_08029498 but compares values in SRAMe1a8array. Also sets lowest SRAM bytes and some arrays.
 08029958	,UNKNOWN	,	,
-080299b0	,UNKNOWN	,	,
+080299b0	,UNKNOWN	,	,Might do something with data and the bootloader (based on input address and being at end of the STM32 restart segment in main)
 080299f4	,FLASH_memoryReadWriteMaybe_g_	,nu	,base on nearby strings
 08029a70	,UNKNOWN	,	,
 08029a84	,GPIO_x_OutputDataRegisters_ConfigureStuff_nu_	,nu	,fxn(GPIOaddr settingbits bool) performs bitwise AND or OR on GPIOx_ODR's bits.
@@ -138,52 +132,52 @@
 08029b00	,GPIO_BCG_GPIOC-ODR5logic_nu_	,nu	,Called only by _HTTPServer_sleepms: Turn off GPIO_G_ODR6. Figure out if GPIOC_ODR5 should be on or off. Flip GPIO_B_ODR0 on-off before every conditional.  Then turn on GPIO_G_ODR6 at end.
 08029f08	,GPIO_BCG_jiggleGPIOC-ODR5toOff_nu_	,nu	,GPIOG_ODR6 off. GPIOC_ODR5 off-off-off-on-on-off-on-off.  GPIOG_ODR6 on.  GPIOB_ODR0 is switched on-off after GPIOC_ODR5 state change.
 0802a0b4	,GPIO_BC_GPIOC-ODR5toOnIfLargeInput_nu_	,nu	,If input bit-shifted 26-31 bits left is < 0 (not sure if input var is 32bits?) then GPIOC_ODR5 on - else GPIOC_ODR5 off.  Flip GPIOB_ODR0 on-off after every conditional.  Flip GPIOB_ODR1 on-off at end.
-0802a234	,UNKNOWN	,	,
-0802a258	,UNKNOWN	,	,
+0802a234	,UNKNOWN	,nu	,Only used by GCOREmaybe_g_:0802afa4: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable or enable that register.
+0802a258	,UNKNOWN	,nu	,Only used by _HTTPServer_sleepms:0802a668: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable that register.
 0802a260	,UNKNOWN	,	,
-0802a3f4	,UNKNOWN	,	,
+0802a3f4	,subGCORE_DACch2stuff_needsResearch	,nu	,
 0802a658	,GUI_GetBkColor_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/Keil.STM32F4xx_DFP.2.2.0.pack/Middlewares/ST/STemWin/Lib/STemWin524b_CM4_GCC_ot.a
 0802a668	,_HTTPServer_sleepms_g_	,symgrate	,/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a
 0802a920	,IS_BIT_SET_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/middleware/MTK/camera/lib/libdrv_idp.a
 0802ab70	,OSMboxPostOpt_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/EmbeddedOffice.Flexible_Safety_RTOS.1.0.0.pack/Lib/cortex-m4f_gcc/cert-mpu_cortex-m4f_gcc.a
 0802ae48	,switchTheseBitsOffOrOnInSRAM03d4_g_	,nu	,Takes binary and bool as input: Binary tells us which bits to switch in SRAM03d4 and bool tells us Off or On.  These bits are used later by only FUN_08032108.
 0802af38	,UNKNOWN	,	,
-0802afa4	,UNKNOWN	,nu	,Accesses STM32 Reserved6 memory and SRAM and GPIOA's port output data register. Does some battery stuff. Prints 'agc_mode_updated' 'txpower_updated' 'nre:%d nrthr:%d' and 'dnfe:%d dnfcnt:%d dnfwidth:%d'.  Also saves/reads from bootloader(?) at 08004000
+0802afa4	,GCOREmaybe_g_	,nu	,Takes (*SRAM008c *SRAM01b0) as inputs and returns 1 or 0 at various stages. The main() fxn appears to hold here in a while TRUE loop (and if loop exits then STM32 resets): Accesses STM32 Reserved6 memory and SRAM and GPIOA's port output data register. Does some battery stuff. Prints 'agc_mode_updated' 'txpower_updated' 'nre:%d nrthr:%d' and 'dnfe:%d dnfcnt:%d dnfwidth:%d'.  Also saves/reads from bootloader(?) at 08004000
 0802c508	,GPIO_F_MAYBE_flipOSPEEDRyOffOrOnMaybe_g_	,nu	,If SRAM01b0 does hold GPIO_F at one point in Main (after it holds firmware date). If GPIOF is in SRAM then 0x8 is the OSPEEDR offset and param_1 is y.
-0802c520	,UNKNOWN	,	,
+0802c520	,UNKNOWN	,	,Returns a value in (ptr_SRAM008c+0x10c)+0xdc
 0802c5ac	,BatteryChargerLogicMaybe_g_	,	nu,
 0802c8d4	,TIM3_IRQHandler_f_	,startup_stm32f427xx.s	,
 0802cc74	,SCB_AIRCR_SetPRIGROUPto0b101	,nu	,Writes VECTKEY=0x5FA and PRIGROUP=0b101 (VectReset-VectClrActive-SysResetReq are kept to defaults). 'To write to this register you must write 0x5FA to the VECTKEY' (VECTKEY is the upper 16 bits). pm0214-stm32-cortexm4-mcus-and-mpus-programming-manual-stmicroelectronics.pdf p228
-0802cc88	,UNKNOWN	,	,
-0802cce4	,UNKNOWN	,	,
-0802cd30	,UNKNOWN	,	,
-0802cd58	,UNKNOWN	,	,
-0802cd6c	,UNKNOWN	,	,
-0802cdf8	,UNKNOWN	,	,
-0802ce04	,UNKNOWN	,	,
-0802ce18	,UNKNOWN	,	,
-0802ce2c	,UNKNOWN	,	,
-0802ce38	,UNKNOWN	,	,
-0802ce58	,Peripherals_DAC_ResetThenDont_g_	,nu	, Sending/not-sending 0x20000000 in binary to RCC APB1 peripheral reset register (RCC+0x20) probably triggers DACRST (from Section 7.3.8 on p237 rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
-0802ce74	,Peripherals_DAC_stuff_g_	,nu	,
+0802cc88	,UNKNOWN	,	,does something with checking AIRCR settings
+0802cce4	,ADC_disableScanModeAndWatchdogsAndSetChannelSequenceMaybe_g_	,nu	,rm0090 p415
+0802cd30	,ADC_memoryAccessOff_g_	,nu	,Sets Analog-to-digital converter common control register (ADC_CCR) [rm0090 p427]: ADC_CCR:ADCPRE='PCLK2 divided by 2'. ADC_CCR:DMA='Direct memory access mode disabled'. ADC_CCR:DELAY='5*TADCCLK'. ADC_CCR:MULTI='Independent mode'.
+0802cd58	,ADC_toggleADCconverter_g_	,nu	,Takes inputs (ADCyPtr bool) and toggles ADCy_CR2:ADON bit [rm0090 p420]: Either Disables ADC conversion and go to power down mode OR Enables ADC.
+0802cd6c	,ADC_channelsSetup_g_	,nu	,Takes (ADCyPTR num1 num2 num3). Define ADC channels with sampling cycle times & number/sequence of conversions: Sets SMPR2=ADC sample time register 2 [rm0090 p420] OR SMPR1=ADC sample time register 1 [rm0090 p420]. Also sets SQR1=ADC regular sequence register 1 [rm0090 p423] OR SQR1=ADC regular sequence register 1 [rm0090 p423]. Also sets SQR3=ADC regular sequence register 3 [rm0090 p423].
+0802cdf8	,ADC_startConversionOfRegularChannels_g_	,nu	,Takes (ADCyPtr). Enables ADCy_CR2:SWSTART [rm0090 p418]: Starts conversion of regular channels. Note: This bit is set by software to start conversion and cleared by hardware as soon as the conversion starts. Note: This bit can be set only when ADON = 1 otherwise no conversion is launched.
+0802ce04	,ADC_toggleDirectMemoryAccessMode_g_	,nu	,Takes (ADCyPtr bool). Toggles ADCy_CR2:DMA [rm0090 p419]: Direct memory access mode (for single ADC mode). Refer to the DMA controller chapter for more details.
+0802ce18	,ADC_toggleContinueAcceptingDirectMemoryAccessRequests_g_	,nu	,Decides to accept more ADC DMA requests or not (after the last transfer is completed): CR2:DDS (DMA disable selection for single ADC mode) = 0 (No new DMA request is issued after the last transfer as configured in the DMA controller) OR CR2:DDS (DMA disable selection for single ADC mode) = 1 (DMA requests are issued as long as data are converted and DMA=1).
+0802ce2c	,CRC_resetCalculationUnit_g_	,nu	,Resets the CRC calculation unit and sets the data register to 0xFFFF FFFF. [rm0090 p115 4.4.3 Control register (CRC_CR)]
+0802ce38	,CRC_loopThing_g_	,nu	,Not sure what this is but involves looping through a pointer to CRC.
+0802ce58	,DAC_ResetThenDont_g_	,nu	, Sending/not-sending 0x20000000 in binary to RCC APB1 peripheral reset register (RCC+0x20) probably triggers DACRST (from Section 7.3.8 on p237 rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
+0802ce74	,DAC_disableChx_g_	,nu	,Probably turns off DAC_CR:ENx (DAC channelx enable/disable) DAC_CR:DMAUDRIEx (DAC channelx DMA Underrun Interrupt enable/disable) DAC_CR:DMAENx (DAC channelx DMA enable/disable).
 0802cea4	,_ZN11__gnu_debug19_Safe_iterator_base8_M_resetEv_g_	,symgrate	,
-0802ceb0	,Peripherals_DAC_ConfigStuff_g_	,nu	, Sets or unsets bits (similar to GPIO_x_ODR configs 0802fa00-0802faa8)
-0802ced0	,UNKNOWN	,	,
-0802cef0	,Peripherals_DAC_stuff_g_	,nu	,
-0802cf10	,Peripherals_DAC_stuff_g_	,nu	,
-0802cf30	,UNKNOWN	,	,
+0802ceb0	,DAC_ConfigStuff_g_	,nu	,Sets or unsets bits (similar to GPIO_x_ODR configs 0802fa00-0802faa8)
+0802ced0	,subGCORE_DACch2start_needsResearch	,nu	,Sets up array SRAM008c and DACch2 and then triggers DACch2 (SRAM008c seems to hold some kind of large array used by GCORE). Sets DAC_SWTRIGR:SWTRIG2=1 (DAC channel2 software trigger enabled) [rm0090 p448]
+0802cef0	,DAC_setCh1register_g_	,nu	,Takes (zero & zero). Sets DAC:DHR12R1 (DAC channel 1 12-bit right-aligned data holding register) with a given value (which in our program is always 0). [rm0090 p448]
+0802cf10	,DAC_setCh2register_g_	,nu	,Takes (zero & value). Sets DAC:DHR12R2 (DAC channel 2 12-bit right-aligned data holding register) with a given value. [rm0090 p450]
+0802cf30	,sub_DMA1_Stream3_IRQHandler	,nu	,remove the top 12 and the bottom 19 bits of a value (using bit shifting)
 0802cf38	,DMA_checkInterruptsMaybe_g_	,nu	,fxn(choosesDMA1orDMA2 setting)
 0802cf74	,DMA_clearAllInterruptFlagsInDMAxHIFCRorLIFCR_g_	,nu	,fxn(ptrDMAx.SxCR_choosesDMA2or1 clearHIFCRorLIFCRprobably). STM32F4xx Reference Manual p327: The two DMA controllers have 16 streams in total (8 for each controller). 10.5.3 DMAx low interrupt flag clear register (DMA_LIFCR) address offset 0x08. 10.5.4 DMAx high interrupt flag clear register (DMA_HIFCR) address offset 0x0C.  0000 1111 0111 1101 clears all flags (TCIFx/HTIFx/TEIFx/DMEIFx/CFEIFx) #-# in DMAx_HISR/LISR.
-0802cfa4	,DMA_SxCR_toggleInterrupts_g_	,nu	,   In our program: Seems to only do [PTR_DMAx.SxCR = 0b10000 | *PTR_DMAx.SxCR] which might(?) enable the DMA1.S3CR TCIE (transfer complete interrupt)
+0802cfa4	,DMA_SxCR&SxFCR_toggleInterrupts_g_	,nu	,Only enables DMA1:S3 Transfer Complete Interrupts & FIFO Error Interrupts in our firmware [DMA1_S3FCR:FEIE = 1 & DMA1_S3CR:TCIE = 1  p325].
 0802cfe4	,DMA_moreInterruptsToggleStuffProbably_g_	,nu	,Is only called by DMA1_Stream3_IRQHandler:08023bfe. Looks like other functions. Didnt seem worth completely looking into.
 0802d038	,DMA_clearAllInterruptFlagsInDMAxHIFCRorLIFCR_g_2	,nu	,Duplicate of 0802cf74 (has different pointers but those pointers go to the same addresses)
 0802d068	,FLASH_unlock_CRregister	,nu	,'The Flash key register is used to allow access to the Flash control register and so to allow program and erase operations. The following values must be programmed consecutively to unlock the FLASH_CR register and allow programming/erasing it: a) KEY1 = 0x45670123  b) KEY2 = 0xCDEF89AB  ... The Flash control register is used to configure and start Flash memory operations.' [Reference Manual rm0090 p98: 3.9 Flash interface registers]
 0802d088	,FLASH_unlockOPTCRregister	,nu	,The Flash option key register is used to allow program and erase operations in the user configuration sector.  The following values must be programmed consecutively to unlock the FLASH_OPTCR register and allow programming it:  a) OPTKEY1 = 0x08192A3B  b) OPTKEY2 = 0x4C5D6E7F
-0802d0a8	,UNKNOWN	,	,check if flashmem write/erase is busy
-0802d178	,UNKNOWN	,	,check if flashmem write/erase is busy
-0802d230	,UNKNOWN	,	,check if flashmem write/erase is busy
-0802d2d8	,UNKNOWN	,	,check if flashmem write/erase is busy
-0802d3e8	,UNKNOWN	,	,check if flashmem write/erase is busy
+0802d0a8	,FLASH_checkstatus1_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
+0802d178	,FLASH_checkstatus2_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
+0802d230	,sub_FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy. Sub-sub of flashmem read/write functions.
+0802d2d8	,FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy.
+0802d3e8	,FLASH_checkstatus4_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
 0802d4c8	,GPIO_Init	,fventuri	,
 0802d564	,GPIO_SetBits	,fventuri	,
 0802d568	,GPIO_ResetBits	,fventuri	,
@@ -202,32 +196,32 @@
 0802d788	,I2C_CheckEvent	,fventuri	,
 0802d7a0	,I2C_GetFlagStatus	,fventuri	,
 0802d7d8	,I2C_GetITStatus	,fventuri	,
-0802d7f4	,UNKNOWN	,	,
-0802d7fc	,UNKNOWN	,	,
-0802d808	,UNKNOWN	,	,
+0802d7f4	,subI2C3_ER_IRQHandler	,nu	,
+0802d7fc	,storeIn420e0020_g_	,nu	,Only used by CheckIfBatteryFullYetMaybe_g_: Stores 1 at beginning of that function and stores 0 at the end. Address 0x420e0020 seems to be in the Reserved section (of the CortexM4 Block 2 Perpherals memory map)
+0802d808	,RCC_configureClocksMaybe_g_	,nu	,Does stuff with RCC.CFGR & RCC.PLLCFGR. Called by startup functions for I2C & clocks. Also called by a USARTx_setGPIOx function.
 0802d898	,RCC_AHB1PeriphClockCmd	,fventuri	,
 0802d8b0	,RCC_APB1PeriphClockCmd	,fventuri	,
 0802d8c8	,RCC_APB2PeriphClockCmd	,fventuri	,
 0802d8e0	,RCC_APB1PeriphResetCmd	,fventuri	,
-0802d8f8	,UNKNOWN	,	,
-0802d910	,UNKNOWN	,	,
-0802d950	,UNKNOWN	,	,
-0802da2c	,UNKNOWN	,	,
-0802da44	,UNKNOWN	,	,
-0802da5c	,UNKNOWN	,	,
-0802da9c	,UNKNOWN	,	,
-0802dab0	,UNKNOWN	,	,
-0802dc68	,UNKNOWN	,	,
-0802dcfc	,UNKNOWN	,	,
-0802dd14	,UNKNOWN	,	,
-0802dd2c	,UNKNOWN	,	,
-0802de84	,UNKNOWN	,	,
-0802de98	,UNKNOWN	,	,
-0802dea0	,UNKNOWN	,	,
-0802deb8	,UNKNOWN	,	,
-0802dec0	,UNKNOWN	,	,
-0802ded0	,UNKNOWN	,	,
-0802dee4	,UNKNOWN	,	,
+0802d8f8	,RCC_APB2PeriphResetCmd	,nu	,
+0802d910	,SPI_6_stuff_sub_FUN080316a0	,nu	,Only used by FUN_080316a0. Does stuff with SPI6 RXCRCR & SR registers.
+0802d950	,I2S_clocksStuff_g_	,nu	,Use audio PLL (aka PLLI2S) clock as I2S clock source [RCC_CFGR:I2SSRC=0 p228] - then check to see if HSI or HSE oscillator are is used for PLL main/audio clocks [RCC_PLLCFGR:PLLSRC p163]. Then Im not sure.
+0802da2c	,SPI_6_enable-disable	,nu	,p917 Enables/disables serial peripheral interface (SPI) 6 control register 1 (SPI_CR1). 'Not used in I2S mode.'
+0802da44	,SPI&I2S_enable-disable_peripheral_g_sub_FUN08030ec4	,nu	,Only used by FUN08030ec4. Sets any given SPI or I2S to enabled or disabled peripheral (except doesnt work on SPI) [SPI_I2SCFGR:I2SE p922].
+0802da9c	,I2Sxext_StuffWithGPIO_g_sub_FUN08030cd0	,nu	,Only used by FUN08030cd0: I2S2_ext an I2S3_ext are used only in full-duplex mode. [rm0090 p900]. GPIOx [rm0090 p281].
+0802da5c	,SPI&I2S_toggleTxRx_g_sub_FUN08030cd0	,nu	,Only used by FUN08030cd0: Toggles SPI&I2S CR2 settings given (SPI/I2Sregister CR2setting on/off). setting=[0000 0000 0000 0001 = RXDMAEN is 1 = Rx buffer DMA enabled]  OR  [0000 0000 0000 0010 = TXDMAEN is 1 = Tx buffer DMA enabled].
+0802dab0	,resetATimer1-14	,nu	,
+0802dc68	,TIMx_CR1-ARR-PSC-RCR-EGR-CR1.CKD_configure_g_sub_FUN08031790	,nu	,Only used by FUN08031790. Needs more research.
+0802dcfc	,TIMx_CR1.ARPE_toggleBuffering_g_sub_FUN08031790	,nu	,Only used by FUN08031790: TIMx_CR1.ARPE (Auto-reload preload enable) [rm0090 p561] enable/disable buffering.
+0802dd14	,TIMx_CR1.CEN_toggle	,nu	,Enables or disables counter (TIMx_CR1.CEN) [rm0090 p561]: External clock gated mode and encoder mode can work only if the CEN bit has been previously set by software
+0802dd2c	,TIMx_CCER_CCMR1_configure_g_	,nu	,Sets Output Capture/Compare channels 1 & 2.
+0802de84	,TIMx_DIER_toggleInterrupts_g_	,nu	,Disables interrupts for break trigger COM and Capture/Compare 4-1 (BIE TIE COMIE CC4IE CC3IE CC2IE CC1IE) but keeps update interrupts (UIE) enabled. [rm0090 p568]
+0802de98	,TIMx_SR_setInterruptFlag_g_	,nu	,Clears other interrupt flags (BIF TIF COMIF CC4IF CC3IF CC2IF UIF) and sets one flag (in our program only sets CC1IF). [rm0090 p570]
+0802dea0	,TIMx_SR-DIER_checkInterruptStates_g_	,nu	,Queries TIMx_SR & TIMx_DIER and returns 1 if a queried channel had an interrupt enabled/flagged. [rm0090 p570]
+0802deb8	,TIMx_SR_setInterruptFlag_g_	,nu	,Probably a duplicated of FUN_0802de98.
+0802dec0	,TIMx_SMCR.TS_configure_g_	,nu	,Takes (ptrTIMx setting). Sets TIMx_SMCR.TS to 'setting' and all other TIMx_SMCR bits to 1. p566
+0802ded0	,TIMx_SMCR.SMS_configure_g_	,nu	,Takes (ptrTIMx setting). Turns off all Slave Mode Selection (SMS) bits then sets SMS bits with 'setting'. (In our program only sets SMS to 'Reset Mode'). p567
+0802dee4	,TIMx_SMCR.MSM_configure_g_	,nu	,Takes (ptrTIMx setting). Turns off TIMx_SMCR.MSM (Master/slave mode). Then sets MSM with 'setting'. [rm0090 p566]
 0802def8	,USARTx_setGPIOspeedMaybe_g_	,nu	,based on input vars and association with FUN_080319fc
 0802dfb8	,UNKNOWN	,	,
 0802e1ba	,UNKNOWN	,	,
@@ -264,7 +258,7 @@
 0802f46c	,UNKNOWN	,	,
 0802f490	,UNKNOWN	,	,
 0802f5a4	,UNKNOWN	,	,
-0802f5ac	,UNKNOWN	,	,
+0802f5ac	,UNKNOWN	,	,Enables ADC1 & ADC2 (and does some other stuff).
 0802f6fc	,UNKNOWN	,	,
 0802f750	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
 0802f78c	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
@@ -292,7 +286,7 @@
 0802fd98	,UNKNOWN	,	,
 0802fedc	,return1	,nu	,
 0802fee0	,Peripherals_RCB-RCC-PWR-FlashInterface_ConfigureStuff_g_	,nu	,Configure RCB-RCC-PWR-FlashInterface and start clocks
-0802ffd0	,UNKNOWN	,	,---
+0802ffd0	,GPIO_ABCDEFG_Init_g_	,	,Needs more research: sub_sub_ of main(). Also sets GPIO A&D to alternate functions. Reset-inits DEFGBCEG
 080301e8	,UNKNOWN	,	,
 08030248	,I2C_CheckEvent_Timeout	,fventuri/symgrate	,_ZN10JSAPI_GPIO9JiggleLowEjj ? /opt/symgrate2-archive/imagecraft/iccv9cortex/bin/ImageCraftCB/share/CodeBlocks/templates/wizard/icc-jsapi-templates/JumpStart_STM32F3xx-Template/Files/bin/Debug/JumpStart_STM32F3xx.elf
 08030286	,SLEEP_X_10	,fventuri	,
@@ -304,9 +298,9 @@
 080308e4	,UNKNOWN	,	,I2C stuff
 08030aa0	,ResetI2c_g_	,nu	,based on nearby strings & nearby  I2C_DeInit then I2C_Init
 08030ba0	,UNKNOWN	,	,
-08030c38	,UNKNOWN	,	,
+08030c38	,UNKNOWN	,	,Needs more research: Sets GPIO B to alternate function and resets I2C2.
 08030cd0	,UNKNOWN	,	,
-08030ec4	,UNKNOWN	,	,
+08030ec4	,UNKNOWN	,	,Enables interrupts streams and peripherals --- left-off here
 08030f3c	,disableAPB1PeriphClock_DMA1S0CR_DMA1S3-4CR_I2S2ext_SPI2-3_andSetDMA1S5CR_GPIOA_GPIOC_g_	,nu	,
 08030fe0	,UNKNOWN	,	,
 08031048	,UNKNOWN	,	,
@@ -329,7 +323,7 @@
 08031d3c	,UNKNOWN	,	,
 08031e20	,UNKNOWN	,	,
 08031e88	,UNKNOWN	,	,
-08032108	,UNKNOWN	,	,
+08032108	,sub_TIM2_IRQHandler	,nu	,Only called by TIM2_IRQHandler:08032cd0_f_
 08032218	,storeInSRAM03d4arrayAt5_g_	,nu	,
 08032224	,storeInSRAM03d4arrayAt6_g_	,nu	,
 08032230	,storeInSRAM03d4arrayAt7_g_	,nu	,
@@ -353,7 +347,7 @@
 08032730	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings
 080327ac	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings
 08032864	,WorkWithCalibrationDataMaybe_g_	,nu	,based on nearby strings
-08032960	,main_f_	,startup_stm32f427xx.s	,
+08032960	,main_f_	,startup_stm32f427xx.s	,Nu: Initializes stuff. Then prints out current firmware version info. Then checks battery. Then does TIM2 and I2C2 stuff. I believe the 'G-Core' stuff might happen inside FUN_0802afa4 while the STM32 waits in a loop at 08032a6a. If the loop exits at 08032a76 then the STM32 resets itself: GUI_GetBkColor disableTIM2CR1-2_TIM3_TIM4_APB1PeriphClocks disableDMA2S6CR_DMA2S7CR_USART1DRnCR1-3_USART6DRnCR1-3_APB2PeriphClockCmd saving something to flashmem and then disabling GPIOG.ODR0&1 GPIOE.ODR7&8 GPIOG.ODR11 GPIOE.ODR9&14 GPIOD.ODR4 GPIOF.ODR11 GPIOD.ODR3&2 GPIOE.ODR11 then it waits for GPIO.IDRs to be empty then turns off GPIOE.ODR11 again and then finally force-resets itself by sending VECTKEY with SYS RESET REQ to SCB.AIRCR.
 08032b84	,UNKNOWN	,	,
 08032ba0	,return-1_g_	,nu	,simple return function: 0xffffffff
 08032ba8	,UNKNOWN	,	,
