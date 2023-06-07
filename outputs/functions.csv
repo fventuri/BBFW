@@ -1,508 +1,518 @@
- address	,function/certainty	,who found it	,notes
-08000000	,flashmemstart/bootloader_g_	,stm32f427zg.pdf#page=86	,based on G90 & STM32
-08020000	,ptr_MasterStack_f_firmware_base_f_	,startup_stm32f427xx.s	,
-08020004	,ptr_ResetHandler_f_	,DUI0553-1.pdf vectormap	,Should lead to main function / Exception #1
-08020008	,ptr_NMI_f_	,DUI0553-1.pdf vectormap	,Exception #2
-0802000C	,ptr_HardFault_f_	,DUI0553-1.pdf vectormap	,Exception #3
-08020010	,ptr_MemoryManagementFault_f_	,DUI0553-1.pdf vectormap	,Exception #4
-08020014	,ptr_BusFault_f_	,DUI0553-1.pdf vectormap	,Exception #5
-08020018	,ptr_UsageFault_f_	,DUI0553-1.pdf vectormap	,Exception #6
-0802001C	,ptr_Reserved_f_	,DUI0553-1.pdf vectormap	,Exception #7-10
-0802002C	,ptr_SVCall_f_	,DUI0553-1.pdf vectormap	,Exception #11
-08020030	,ptr_ReservedForDebug_f_	,DUI0553-1.pdf vectormap	,Exception #12
-08020034	,ptr_Reserved_f_	,DUI0553-1.pdf vectormap	,Exception #13
-08020038	,ptr_PendSV_f_	,DUI0553-1.pdf vectormap	,Exception #14
-0802003C	,ptr_Systick_f_	,DUI0553-1.pdf vectormap	,Exception #15
-08020040	,ptr_IRQ0_f_	,DUI0553-1.pdf vectormap	,Exception #16
-08020044	,ptr_IRQ1_f_	,DUI0553-1.pdf vectormap	,Exception #17
-08020048	,ptr_IRQ2_f_	,DUI0553-1.pdf vectormap	,Exception #18
-080201d4	,checksForSpecial_initParameterMaybe_g_	,nu	,If a nearby dword holds a value then concatenate _init address with a value from SRAM?
-080201f0	,arm_bitreversal_32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.5.0.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a
-0802025a	,arm_bitreversal_32_g_	,symgrate	,
-080202b0	,STRLEN_g	,fventuri/symgrate	,
-080202c0	,memchr	,fventuri	,
-08020360	,__aeabi_drsub_g_	,symgrate	,
-08020368	,__aeabi_dsub_g_	,symgrate	,
-0802036c	,__aeabi_dadd_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-080205e4	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020604	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020628	,__aeabi_f2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-0802066c	,__aeabi_ul2d_g_	,symgrate	,
-0802067c	,__aeabi_l2d_g_	,symgrate	,
-080206d8	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-080208b4	,sub__aeabi_dmul:080206f4_g_	,nu	,Is only called by __aeabi_dmul:080206f4
-0802092c	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020a9a	,sub__aeabi_dmul:08020948_g_	,nu	,Is only called by __aeabi_dmul:08020948
-08020b0c	,__eqdf2_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020b88	,__aeabi_cdrcmple_g_	,symgrate	,
-08020b98	,__aeabi_cdcmple_g_	,symgrate	,
-08020ba8	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
-08020bbc	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
-08020bd0	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something
-08020be4	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something
-08020bf8	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something
-08020c0c	,__aeabi_dcmpun_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020c38	,__aeabi_d2iz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020c88	,__aeabi_d2uiz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020cc8	,UNKNOWN	,	,
-08020d68	,__aeabi_uldivmod_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a
-08020d98	,__udivmoddi4_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
-08021068	,SQRT_g_	,fventuri	,
-0802108c	,sub1_FUN_08022710	,nu	,Only used by FUN_08022710
-080210a8	,ATAN2_DEGREES_g_	,fventuri	,
-08021188	,sub2_FUN_08022710	,nu	,Only used by FUN_08022710
-080211a8	,sub3_FUN_08022710	,nu	,Only used by FUN_08022710
-08021200	,sub4_FUN_08022710	,nu	,Only used by FUN_08022710
-0802129c	,sub5_FUN_08022710	,nu	,Only used by FUN_08022710
-08021338	,sub6_FUN_08022710	,nu	,Only used by FUN_08022710
-08021390	,sub7_FUN_08022710	,nu	,Only used by FUN_08022710
-080213ec	,sub8_FUN_08022710	,nu	,Only used by FUN_08022710
-0802148c	,sub9_FUN_08022710	,nu	,Only used by FUN_08022710. Called twice.
-080214e0	,UNKNOWN	,	,Only called by DMA1_Stream3_IRQHandler_f_ & FUN_08022710. Called multiple times by both.
-0802166c	,sub10_FUN_08022710	,nu	,Only used by FUN_08022710: Stores/processes data in SRAM (input is either SRAM9294 or SRAM942C or SRAM9aa8)
-080216f8	,sub11_FUN_08022710	,nu	,Only used by FUN_08022710
-080219f4	,sub12_FUN_08022710	,nu	,Only used by FUN_08022710
-08021a58	,sub13_FUN_08022710	,nu	,Only used by FUN_08022710
-08021ac8	,sub_DMA1_Stream3_IRQHandler	,nu	,Only used by DMA1_Stream3_IRQHandler_f_
-08021e28	,sub14_FUN_08022710	,nu	,Only used by FUN_08022710
-08021e70	,sub15_FUN_08022710	,nu	,Only used by FUN_08022710
-08021fd0	,sub16_FUN_08022710	,nu	,Only used by FUN_08022710
-080221ec	,sub17_FUN_08022710	,nu	,Only used by FUN_08022710
-08022244	,_HTTPServer_sleepms_g_	,symgrate	,Only called by DMA1_Stream3_IRQHandler_f_.  /opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a
-0802252c	,sub18_FUN_08022710	,nu	,Only used by FUN_08022710
-08022658	,sub_FUN_08032108	,nu	,Only used by FUN_08032108
-08022684	,add1.0AndStoreInSRAM9c40_g_	,nu	,Only used by FUN_0802afa4
-08022698	,UNKNOWN	,	,Only used by FUN_0802afa4
-08022710	,UNKNOWN	,	,Stores a ton of stuff in a large array in SRAM5910. Only used by GPIO_EG_DataRegisters_I2cStuff_g_:08023b86
-080230a4	,changeSRAM5910[0x4d92]from0to4_thenwait100_g_	,nu	,Only used by FUN_0802afa4.  If SRAM5910[4d92] is 0 then set it to 4 and wait 100ms (exit loop early if SRAM5910[4d92] gets set back to 0).
-080230dc	,return_g_	,nu	,
-080230e0	,storeInSRAM5910array[0x8148]_OrZeroSRAM5910[0x4d5d-0x4d5e]_g_	,nu	,If input is 0 then zero SRAM5910[0x4d5d] & SRAM5910[0x4d5e]. Otherwise store the input into SRAM5910array[0x8148]
-080230fc	,UNKNOWN	,	,stores stuff in SRAM
-08023124	,UNKNOWN	,	,08023124/08023180 are very similar
-08023180	,UNKNOWN	,	,08023124/08023180 are very similar
-080231e8	,UNKNOWN	,	,080231e8 & 08023208 are very similar
-08023208	,UNKNOWN	,	,080231e8 & 08023208 are very similar
-08023228	,storeInSRAM5910array[0x4fbd]_thenFlipBitInSRAM5910array[0x4fc4]_g_	,nu	,
-08023248	,storeInSRAM5910array[0x4fc2]	,nu	,
-08023268	,storeInSRAM5910array[0x4fbf]_thenFlipBitInSRAM5910array[0x4fc4]_g_	,nu	,
-08023288	,UNKNOWN	,	,
-080232f4	,UNKNOWN	,	,
-080233d8	,UNKNOWN	,	,
-08023444	,RelatedToSettingAGCmodeMaybe_g_	,nu	,base on nearby strings
-08023760	,UNKNOWN	,	,
-080237e8	,printfAnArrayContainingFourInputFilterSettings_g_	,nu	,Loads input[0-1-2-3] into SRAM5910[0x4fac-0x4fb0-0x4fb4-0x4fb8] then printf's these values to '\r\nfilter1[%04ld_ %04ld]; filter2[%04ld_ %04ld]'.  Input array probably holds filter settings - each one four bytes long.
-08023868	,storeInSRAM5910array[0x59cd]	,nu	,
-08023878	,storeVectorAsFloatInSRAMb350_g_	,nu	,Also truncates the vector to a max value of 100
-08023894	,storeInSRAM5910array[0x80c4]	,nu	,
-080238a8	,UNKNOWN	,	,
-080239d8	,UNKNOWN	,	,
-080239f8	,storeInSRAM5910+0x8194_akaSRAMdaa4_g_	,nu	,
-08023a08	,storeInSRAM5910+0x8198_akaSRAMdaa8_g_	,nu	,
-08023a18	,storeInSRAM5910array[0x4d60]	,nu	,
-08023a28	,storeInSRAM5910array[0x4d61]	,nu	,
-08023a38	,storeInSRAM5910array[0x4d63]	,nu	,
-08023a48	,UNKNOWN	,	,
-08023ae4	,storeInSRAM5910+0x4d70_akaSRAMa680	,nu	,
-08023af4	,storeInSRAM5910array[0x4d90]	,nu	,
-08023b04	,storeInSRAM5910array[0x4ddc]	,nu	,
-08023b14	,returnSRAMda68_aka_in_r0_g_	,nu	,Returns stack pointer maybe? ('return in_r0'): Returns SRAMda68 via 'vldr' (SRAMda68 is written to multiple times by function DMA1_Stream3_IRQHandler)
-08023b20	,returnSRAMdad8_aka_in_r0_g_	,nu	,ibid
-08023b2c	,returnSRAMda88_aka_in_r0_g_	,nu	,ibid
-08023b38	,enableSysTickDaemonIfSRAMDA5AisZero_g_	,nu	,Switches on FUN_08032d4c (sysTickDaemonMaybe_g_nu_) if SRAMda88 is 0
-08023b70	,returnSRAM5910array[0x4d5e]	,nu	,
-08023b80	,GPIO_EG_DataRegisters_I2cStuff_g_	,nu	,Switches off GPIOG_ODR8/GPIOE_ODR15 then enables SysTickDaemon_g_ and then switches them back on. Then does I2C stuff with GPIOE and GPIOG input/output data type registers.
-08023bf0	,DMA1_Stream3_IRQHandler_f_	,startup_stm32f427xx.s	,might be __kernel_rem_pio2 ? /opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib/rtsv7A8_T_le_n_v3_eabi.lib
-08027ef0	,UNKNOWN	,	,
-08027f34	,UNKNOWN	,	,
-08027fac	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a
-08028380	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a
-08028e88	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a
-08029474	,getSRAM3574array5value_g_	,nu	,SRAM3574 must hold an array
-08029480	,getSRAM3574array4value_g_	,nu	,SRAM3574 must hold an array
-0802948c	,getSRAM3574array6value_g_	,nu	,SRAM3574 must hold an array
-08029498	,compareGPIO_x_registerValsMaybe_g_	,nu	,   Takes an array of GPIO_x register values? Checks one of them and stores result in SRAMe1a8? (Possible registers include: OTYPER OSPEEDR PUPDR IDR ODR and BSRR) Then compares the other?
-080295f0	,UNKNOWN	,	,SRAMe1a8array might be a jump table
-080296b4	,compareSRAMe1a8_GPIOregisterValsMaybe_g_	,nu	,Similar to FUN_08029498 but compares values in SRAMe1a8array. Also sets lowest SRAM bytes and some arrays.
-08029958	,UNKNOWN	,	,
-080299b0	,UNKNOWN	,	,Might do something with data and the bootloader (based on input address and being at end of the STM32 restart segment in main)
-080299f4	,FLASH_memoryReadWriteMaybe_g_	,nu	,base on nearby strings
-08029a70	,UNKNOWN	,	,
-08029a84	,GPIO_x_OutputDataRegisters_ConfigureStuff_nu_	,nu	,fxn(GPIOaddr settingbits bool) performs bitwise AND or OR on GPIOx_ODR's bits.
-08029a98	,UNKNOWN	,	,
-08029b00	,GPIO_BCG_GPIOC-ODR5logic_nu_	,nu	,Called only by _HTTPServer_sleepms: Turn off GPIO_G_ODR6. Figure out if GPIOC_ODR5 should be on or off. Flip GPIO_B_ODR0 on-off before every conditional.  Then turn on GPIO_G_ODR6 at end.
-08029f08	,GPIO_BCG_jiggleGPIOC-ODR5toOff_nu_	,nu	,GPIOG_ODR6 off. GPIOC_ODR5 off-off-off-on-on-off-on-off.  GPIOG_ODR6 on.  GPIOB_ODR0 is switched on-off after GPIOC_ODR5 state change.
-0802a0b4	,GPIO_BC_GPIOC-ODR5toOnIfLargeInput_nu_	,nu	,If input bit-shifted 26-31 bits left is < 0 (not sure if input var is 32bits?) then GPIOC_ODR5 on - else GPIOC_ODR5 off.  Flip GPIOB_ODR0 on-off after every conditional.  Flip GPIOB_ODR1 on-off at end.
-0802a234	,UNKNOWN	,nu	,Only used by GCOREmaybe_g_:0802afa4: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable or enable that register.
-0802a258	,UNKNOWN	,nu	,Only used by _HTTPServer_sleepms:0802a668: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable that register.
-0802a260	,UNKNOWN	,	,
-0802a3f4	,subGCORE_DACch2stuff_needsResearch	,nu	,
-0802a658	,GUI_GetBkColor_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/Keil.STM32F4xx_DFP.2.2.0.pack/Middlewares/ST/STemWin/Lib/STemWin524b_CM4_GCC_ot.a
-0802a668	,_HTTPServer_sleepms_g_	,symgrate	,/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a
-0802a920	,IS_BIT_SET_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/middleware/MTK/camera/lib/libdrv_idp.a
-0802ab70	,OSMboxPostOpt_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/EmbeddedOffice.Flexible_Safety_RTOS.1.0.0.pack/Lib/cortex-m4f_gcc/cert-mpu_cortex-m4f_gcc.a
-0802ae48	,switchTheseBitsOffOrOnInSRAM03d4_g_	,nu	,Takes binary and bool as input: Binary tells us which bits to switch in SRAM03d4 and bool tells us Off or On.  These bits are used later by only FUN_08032108.
-0802af38	,UNKNOWN	,	,
-0802afa4	,GCOREmaybe_g_	,nu	,Takes (*SRAM008c *SRAM01b0) as inputs and returns 1 or 0 at various stages. The main() fxn appears to hold here in a while TRUE loop (and if loop exits then STM32 resets): Accesses STM32 Reserved6 memory and SRAM and GPIOA's port output data register. Does some battery stuff. Prints 'agc_mode_updated' 'txpower_updated' 'nre:%d nrthr:%d' and 'dnfe:%d dnfcnt:%d dnfwidth:%d'.  Also saves/reads from bootloader(?) at 08004000
-0802c508	,GPIO_F_MAYBE_flipOSPEEDRyOffOrOnMaybe_g_	,nu	,If SRAM01b0 does hold GPIO_F at one point in Main (after it holds firmware date). If GPIOF is in SRAM then 0x8 is the OSPEEDR offset and param_1 is y.
-0802c520	,UNKNOWN	,	,Returns a value in (ptr_SRAM008c+0x10c)+0xdc
-0802c5ac	,BatteryChargerLogicMaybe_g_	,	nu,
-0802c8d4	,TIM3_IRQHandler_f_	,startup_stm32f427xx.s	,
-0802cc74	,SCB_AIRCR_SetPRIGROUPto0b101	,nu	,Writes VECTKEY=0x5FA and PRIGROUP=0b101 (VectReset-VectClrActive-SysResetReq are kept to defaults). 'To write to this register you must write 0x5FA to the VECTKEY' (VECTKEY is the upper 16 bits). pm0214-stm32-cortexm4-mcus-and-mpus-programming-manual-stmicroelectronics.pdf p228
-0802cc88	,UNKNOWN	,	,does something with checking AIRCR settings
-0802cce4	,ADC_disableScanModeAndWatchdogsAndSetChannelSequenceMaybe_g_	,nu	,rm0090 p415
-0802cd30	,ADC_memoryAccessOff_g_	,nu	,Sets Analog-to-digital converter common control register (ADC_CCR) [rm0090 p427]: ADC_CCR:ADCPRE='PCLK2 divided by 2'. ADC_CCR:DMA='Direct memory access mode disabled'. ADC_CCR:DELAY='5*TADCCLK'. ADC_CCR:MULTI='Independent mode'.
-0802cd58	,ADC_toggleADCconverter_g_	,nu	,Takes inputs (ADCyPtr bool) and toggles ADCy_CR2:ADON bit [rm0090 p420]: Either Disables ADC conversion and go to power down mode OR Enables ADC.
-0802cd6c	,ADC_channelsSetup_g_	,nu	,Takes (ADCyPTR num1 num2 num3). Define ADC channels with sampling cycle times & number/sequence of conversions: Sets SMPR2=ADC sample time register 2 [rm0090 p420] OR SMPR1=ADC sample time register 1 [rm0090 p420]. Also sets SQR1=ADC regular sequence register 1 [rm0090 p423] OR SQR1=ADC regular sequence register 1 [rm0090 p423]. Also sets SQR3=ADC regular sequence register 3 [rm0090 p423].
-0802cdf8	,ADC_startConversionOfRegularChannels_g_	,nu	,Takes (ADCyPtr). Enables ADCy_CR2:SWSTART [rm0090 p418]: Starts conversion of regular channels. Note: This bit is set by software to start conversion and cleared by hardware as soon as the conversion starts. Note: This bit can be set only when ADON = 1 otherwise no conversion is launched.
-0802ce04	,ADC_toggleDirectMemoryAccessMode_g_	,nu	,Takes (ADCyPtr bool). Toggles ADCy_CR2:DMA [rm0090 p419]: Direct memory access mode (for single ADC mode). Refer to the DMA controller chapter for more details.
-0802ce18	,ADC_toggleContinueAcceptingDirectMemoryAccessRequests_g_	,nu	,Decides to accept more ADC DMA requests or not (after the last transfer is completed): CR2:DDS (DMA disable selection for single ADC mode) = 0 (No new DMA request is issued after the last transfer as configured in the DMA controller) OR CR2:DDS (DMA disable selection for single ADC mode) = 1 (DMA requests are issued as long as data are converted and DMA=1).
-0802ce2c	,CRC_resetCalculationUnit_g_	,nu	,Resets the CRC calculation unit and sets the data register to 0xFFFF FFFF. [rm0090 p115 4.4.3 Control register (CRC_CR)]
-0802ce38	,CRC_loopThing_g_	,nu	,Not sure what this is but involves looping through a pointer to CRC.
-0802ce58	,DAC_ResetThenDont_g_	,nu	, Sending/not-sending 0x20000000 in binary to RCC APB1 peripheral reset register (RCC+0x20) probably triggers DACRST (from Section 7.3.8 on p237 rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
-0802ce74	,DAC_disableChx_g_	,nu	,Probably turns off DAC_CR:ENx (DAC channelx enable/disable) DAC_CR:DMAUDRIEx (DAC channelx DMA Underrun Interrupt enable/disable) DAC_CR:DMAENx (DAC channelx DMA enable/disable).
-0802cea4	,_ZN11__gnu_debug19_Safe_iterator_base8_M_resetEv_g_	,symgrate	,
-0802ceb0	,DAC_ConfigStuff_g_	,nu	,Sets or unsets bits (similar to GPIO_x_ODR configs 0802fa00-0802faa8)
-0802ced0	,subGCORE_DACch2start_needsResearch	,nu	,Sets up array SRAM008c and DACch2 and then triggers DACch2 (SRAM008c seems to hold some kind of large array used by GCORE). Sets DAC_SWTRIGR:SWTRIG2=1 (DAC channel2 software trigger enabled) [rm0090 p448]
-0802cef0	,DAC_setCh1register_g_	,nu	,Takes (zero & zero). Sets DAC:DHR12R1 (DAC channel 1 12-bit right-aligned data holding register) with a given value (which in our program is always 0). [rm0090 p448]
-0802cf10	,DAC_setCh2register_g_	,nu	,Takes (zero & value). Sets DAC:DHR12R2 (DAC channel 2 12-bit right-aligned data holding register) with a given value. [rm0090 p450]
-0802cf30	,sub_DMA1_Stream3_IRQHandler	,nu	,remove the top 12 and the bottom 19 bits of a value (using bit shifting)
-0802cf38	,DMA_checkInterruptsMaybe_g_	,nu	,fxn(choosesDMA1orDMA2 setting)
-0802cf74	,DMA_clearAllInterruptFlagsInDMAxHIFCRorLIFCR_g_	,nu	,fxn(ptrDMAx.SxCR_choosesDMA2or1 clearHIFCRorLIFCRprobably). STM32F4xx Reference Manual p327: The two DMA controllers have 16 streams in total (8 for each controller). 10.5.3 DMAx low interrupt flag clear register (DMA_LIFCR) address offset 0x08. 10.5.4 DMAx high interrupt flag clear register (DMA_HIFCR) address offset 0x0C.  0000 1111 0111 1101 clears all flags (TCIFx/HTIFx/TEIFx/DMEIFx/CFEIFx) #-# in DMAx_HISR/LISR.
-0802cfa4	,DMA_SxCR&SxFCR_toggleInterrupts_g_	,nu	,Only enables DMA1:S3 Transfer Complete Interrupts & FIFO Error Interrupts in our firmware [DMA1_S3FCR:FEIE = 1 & DMA1_S3CR:TCIE = 1  p325].
-0802cfe4	,DMA_moreInterruptsToggleStuffProbably_g_	,nu	,Is only called by DMA1_Stream3_IRQHandler:08023bfe. Looks like other functions. Didnt seem worth completely looking into.
-0802d038	,DMA_clearAllInterruptFlagsInDMAxHIFCRorLIFCR_g_2	,nu	,Duplicate of 0802cf74 (has different pointers but those pointers go to the same addresses)
-0802d068	,FLASH_unlock_CRregister	,nu	,'The Flash key register is used to allow access to the Flash control register and so to allow program and erase operations. The following values must be programmed consecutively to unlock the FLASH_CR register and allow programming/erasing it: a) KEY1 = 0x45670123  b) KEY2 = 0xCDEF89AB  ... The Flash control register is used to configure and start Flash memory operations.' [Reference Manual rm0090 p98: 3.9 Flash interface registers]
-0802d088	,FLASH_unlockOPTCRregister	,nu	,The Flash option key register is used to allow program and erase operations in the user configuration sector.  The following values must be programmed consecutively to unlock the FLASH_OPTCR register and allow programming it:  a) OPTKEY1 = 0x08192A3B  b) OPTKEY2 = 0x4C5D6E7F
-0802d0a8	,FLASH_checkstatus1_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
-0802d178	,FLASH_checkstatus2_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
-0802d230	,sub_FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy. Sub-sub of flashmem read/write functions.
-0802d2d8	,FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy.
-0802d3e8	,FLASH_checkstatus4_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.
-0802d4c8	,GPIO_Init	,fventuri	,
-0802d564	,GPIO_SetBits	,fventuri	,
-0802d568	,GPIO_ResetBits	,fventuri	,
-0802d56c	,GPIO_PinAFConfig	,fventuri	,Configures a GPIO pin to be used for an alternate function. GPIOx: select the GPIO peripheral. GPIO_PinSource: Specify the pin for the Alternate function. GPIO_AF: Select desired Alternate Function. https://github.com/holodnak/stm32-fdsemu/blob/4e608522447c342aa917a3a4db67922c1f6aa704/Libraries/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_gpio.c#L510
-0802d598	,I2C_DeInit	,fventuri	,
-0802d604	,I2C_Init	,fventuri	,
-0802d6d8	,I2C_Cmd	,fventuri	,
-0802d6f0	,I2C_GenerateSTART	,fventuri	,
-0802d708	,I2C_GenerateSTOP	,fventuri	,
-0802d720	,I2C_Send7bitAddress	,fventuri	,
-0802d738	,I2C_AcknowledgeConfig	,fventuri	,
-0802d750	,I2C_StretchClockCmd	,fventuri	,
-0802d768	,I2C_SendData	,fventuri	,
-0802d76c	,I2C_ReceiveData	,fventuri	,
-0802d774	,I2C_ITConfig	,fventuri	,
-0802d788	,I2C_CheckEvent	,fventuri	,
-0802d7a0	,I2C_GetFlagStatus	,fventuri	,
-0802d7d8	,I2C_GetITStatus	,fventuri	,
-0802d7f4	,subI2C3_ER_IRQHandler	,nu	,
-0802d7fc	,storeIn420e0020_g_	,nu	,Only used by CheckIfBatteryFullYetMaybe_g_: Stores 1 at beginning of that function and stores 0 at the end. Address 0x420e0020 seems to be in the Reserved section (of the CortexM4 Block 2 Perpherals memory map)
-0802d808	,RCC_configureClocksMaybe_g_	,nu	,Does stuff with RCC.CFGR & RCC.PLLCFGR. Called by startup functions for I2C & clocks. Also called by a USARTx_setGPIOx function.
-0802d898	,RCC_AHB1PeriphClockCmd	,fventuri	,
-0802d8b0	,RCC_APB1PeriphClockCmd	,fventuri	,
-0802d8c8	,RCC_APB2PeriphClockCmd	,fventuri	,
-0802d8e0	,RCC_APB1PeriphResetCmd	,fventuri	,
-0802d8f8	,RCC_APB2PeriphResetCmd	,nu	,
-0802d910	,SPI_6_stuff_sub_FUN080316a0	,nu	,Only used by FUN_080316a0. Does stuff with SPI6 RXCRCR & SR registers.
-0802d950	,I2S_clocksStuff_g_	,nu	,Use audio PLL (aka PLLI2S) clock as I2S clock source [RCC_CFGR:I2SSRC=0 p228] - then check to see if HSI or HSE oscillator are is used for PLL main/audio clocks [RCC_PLLCFGR:PLLSRC p163]. Then Im not sure.
-0802da2c	,SPI_6_enable-disable	,nu	,p917 Enables/disables serial peripheral interface (SPI) 6 control register 1 (SPI_CR1). 'Not used in I2S mode.'
-0802da44	,SPI&I2S_enable-disable_peripheral_g_sub_FUN08030ec4	,nu	,Only used by FUN08030ec4. Sets any given SPI or I2S to enabled or disabled peripheral (except doesnt work on SPI) [SPI_I2SCFGR:I2SE p922].
-0802da9c	,I2Sxext_StuffWithGPIO_g_sub_FUN08030cd0	,nu	,Only used by FUN08030cd0: I2S2_ext an I2S3_ext are used only in full-duplex mode. [rm0090 p900]. GPIOx [rm0090 p281].
-0802da5c	,SPI&I2S_toggleTxRx_g_sub_FUN08030cd0	,nu	,Only used by FUN08030cd0: Toggles SPI&I2S CR2 settings given (SPI/I2Sregister CR2setting on/off). setting=[0000 0000 0000 0001 = RXDMAEN is 1 = Rx buffer DMA enabled]  OR  [0000 0000 0000 0010 = TXDMAEN is 1 = Tx buffer DMA enabled].
-0802dab0	,resetATimer1-14	,nu	,
-0802dc68	,TIMx_CR1-ARR-PSC-RCR-EGR-CR1.CKD_configure_g_sub_FUN08031790	,nu	,Only used by FUN08031790. Needs more research.
-0802dcfc	,TIMx_CR1.ARPE_toggleBuffering_g_sub_FUN08031790	,nu	,Only used by FUN08031790: TIMx_CR1.ARPE (Auto-reload preload enable) [rm0090 p561] enable/disable buffering.
-0802dd14	,TIMx_CR1.CEN_toggle	,nu	,Enables or disables counter (TIMx_CR1.CEN) [rm0090 p561]: External clock gated mode and encoder mode can work only if the CEN bit has been previously set by software
-0802dd2c	,TIMx_CCER_CCMR1_configure_g_	,nu	,Sets Output Capture/Compare channels 1 & 2.
-0802de84	,TIMx_DIER_toggleInterrupts_g_	,nu	,Disables interrupts for break trigger COM and Capture/Compare 4-1 (BIE TIE COMIE CC4IE CC3IE CC2IE CC1IE) but keeps update interrupts (UIE) enabled. [rm0090 p568]
-0802de98	,TIMx_SR_setInterruptFlag_g_	,nu	,Clears other interrupt flags (BIF TIF COMIF CC4IF CC3IF CC2IF UIF) and sets one flag (in our program only sets CC1IF). [rm0090 p570]
-0802dea0	,TIMx_SR-DIER_checkInterruptStates_g_	,nu	,Queries TIMx_SR & TIMx_DIER and returns 1 if a queried channel had an interrupt enabled/flagged. [rm0090 p570]
-0802deb8	,TIMx_SR_setInterruptFlag_g_	,nu	,Probably a duplicated of FUN_0802de98.
-0802dec0	,TIMx_SMCR.TS_configure_g_	,nu	,Takes (ptrTIMx setting). Sets TIMx_SMCR.TS to 'setting' and all other TIMx_SMCR bits to 1. p566
-0802ded0	,TIMx_SMCR.SMS_configure_g_	,nu	,Takes (ptrTIMx setting). Turns off all Slave Mode Selection (SMS) bits then sets SMS bits with 'setting'. (In our program only sets SMS to 'Reset Mode'). p567
-0802dee4	,TIMx_SMCR.MSM_configure_g_	,nu	,Takes (ptrTIMx setting). Turns off TIMx_SMCR.MSM (Master/slave mode). Then sets MSM with 'setting'. [rm0090 p566]
-0802def8	,USARTx_setGPIOspeedMaybe_g_	,nu	,based on input vars and association with FUN_080319fc
-0802dfb8	,UNKNOWN	,	,
-0802e1ba	,UNKNOWN	,	,
-0802e344	,I2cDataStuff_g_	,nu	,base on nearby strings
-0802e3f4	,UNKNOWN	,	,
-0802e4a8	,UNKNOWN	,	,
-0802e55c	,UNKNOWN	,	,
-0802e5c4	,UNKNOWN	,	,
-0802e62c	,UNKNOWN	,	,
-0802e738	,UNKNOWN	,	,
-0802e784	,UNKNOWN	,	,
-0802e7c8	,UNKNOWN	,	,
-0802e80c	,UNKNOWN	,	,
-0802ec88	,UNKNOWN	,	,
-0802ec98	,SomethingToDoWithChargeControllerbq24715_g_	,nu	,based on nearby strings
-0802edec	,UNKNOWN	,	,
-0802edf0	,UNKNOWN	,	,
-0802ee54	,UNKNOWN	,	,
-0802eebc	,UNKNOWN	,	,
-0802ef84	,UNKNOWN	,	,
-0802ef9c	,UNKNOWN	,	,
-0802f0d0	,fdopen_g_	,symgrate	,/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a
-0802f114	,fdopen_g_	,symgrate	,/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a
-0802f16a	,UNKNOWN	,	,
-0802f174	,UNKNOWN	,	,
-0802f1a0	,InitConfigFilesAccessStuffMaybe_g_	,nu	,based on nearby strings
-0802f21c	,UNKNOWN	,	,
-0802f288	,SRAMwriterMaybe_g_	,nu	,based on associated addresses in OSMboxPostOpt
-0802f2d0	,UNKNOWN	,	,
-0802f300	,turnOffOrOnBitsAtTopFourBytesOfAddr_g_	,nu	,Do a bitwise AND or OR on top four bytes of input address.  Input addr is usually SRAM 20000394.
-0802f310	,UNKNOWN	,	,
-0802f344	,UNKNOWN	,	,
-0802f3b4	,UNKNOWN	,	,
-0802f46c	,UNKNOWN	,	,
-0802f490	,UNKNOWN	,	,
-0802f5a4	,UNKNOWN	,	,
-0802f5ac	,UNKNOWN	,	,Enables ADC1 & ADC2 (and does some other stuff).
-0802f6fc	,UNKNOWN	,	,
-0802f750	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
-0802f78c	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
-0802f7d0	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
-0802f810	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
-0802f850	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff
-0802f8ac	,GPIO_E_ODR10_ConfigureStuff_g_	,nu	,Similar to 0802fa00-0802faa8. Never gets called??
-0802f8cc	,returnSRAM3690	,nu	,
-0802f8d8	,UNKNOWN	,	,
-0802f8f0	,mightBeGPIO_x_ODRpreset0_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f910	,mightBeGPIO_x_ODRpreset1_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f930	,mightBeGPIO_x_ODRpreset2_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f950	,mightBeGPIO_x_ODRpreset3_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f970	,mightBeGPIO_x_ODRpreset4_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f98c	,mightBeGPIO_x_ODRpreset5_g_	,nu	,Guess based on functions 0802f9ac-0802fac4
-0802f9ac	,mightBeGPIO_x_ODRpresets_g_	,nu	,fxnTurnOffBits(turnOnThisPresetBit) - Loads up an array (its values probably represent GPIO_x_ODR's).  Then ensures some preset bits are off in SRAM0398 (with a bitwise AND).  Then then turns on the desired array bit in the preset (with a bitwise OR).
-0802fa00	,GPIO_G_ODR02_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value) - Bitwise AND 0 sets target ODR bit to 0. Bitwise OR 1 sets target bit to 1. 
-0802fa1c	,GPIO_G_ODR02_OutputIfInputIs0	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802fa38	,GPIO_G_ODR03_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802fa54	,GPIO_G_ODR05_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802fa70	,GPIO_F_ODR12_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802fa8c	,GPIO_D_ODR14_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802faa8	,GPIO_D_ODR15_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)
-0802fac4	,GPIO_D_ODR13-11-10-9_SetOrResetSomeOrAll_nu_	,nu	,Sets/REset OutputDataRegisters 13 11 10 and 9 GPIOx_BSRR (BSy or BRy bits). 0x2e00=Bz13-11-10-9  0x2000=Bz13  0x800=Bz11   0x400=Bz10   0x200=Bz9 (I'm defining z as R or S - see the GPIOx_BSRR documentation) 
-0802fd98	,UNKNOWN	,	,
-0802fedc	,return1	,nu	,
-0802fee0	,Peripherals_RCB-RCC-PWR-FlashInterface_ConfigureStuff_g_	,nu	,Configure RCB-RCC-PWR-FlashInterface and start clocks
-0802ffd0	,GPIO_ABCDEFG_Init_g_	,	,Needs more research: sub_sub_ of main(). Also sets GPIO A&D to alternate functions. Reset-inits DEFGBCEG
-080301e8	,UNKNOWN	,	,
-08030248	,I2C_CheckEvent_Timeout	,fventuri/symgrate	,_ZN10JSAPI_GPIO9JiggleLowEjj ? /opt/symgrate2-archive/imagecraft/iccv9cortex/bin/ImageCraftCB/share/CodeBlocks/templates/wizard/icc-jsapi-templates/JumpStart_STM32F3xx-Template/Files/bin/Debug/JumpStart_STM32F3xx.elf
-08030286	,SLEEP_X_10	,fventuri	,
-080302bc	,UNKNOWN	,	,I2C stuff
-08030398	,UNKNOWN	,	,I2C stuff
-080304a8	,UNKNOWN	,	,I2C stuff
-080305f0	,UNKNOWN	,	,I2C stuff
-08030788	,UNKNOWN	,	,I2C stuff
-080308e4	,UNKNOWN	,	,I2C stuff
-08030aa0	,ResetI2c_g_	,nu	,based on nearby strings & nearby  I2C_DeInit then I2C_Init
-08030ba0	,UNKNOWN	,	,
-08030c38	,UNKNOWN	,	,Needs more research: Sets GPIO B to alternate function and resets I2C2.
-08030cd0	,UNKNOWN	,	,
-08030ec4	,UNKNOWN	,	,Enables interrupts streams and peripherals --- left-off here
-08030f3c	,disableAPB1PeriphClock_DMA1S0CR_DMA1S3-4CR_I2S2ext_SPI2-3_andSetDMA1S5CR_GPIOA_GPIOC_g_	,nu	,
-08030fe0	,UNKNOWN	,	,
-08031048	,UNKNOWN	,	,
-08031070	,UNKNOWN	,	,
-08031098	,UNKNOWN	,	,
-080310ac	,UNKNOWN	,	,
-080310b4	,copyOneArrayToAnotherMaybe_g_	,nu	,
-08031108	,SLEEP_X_800	,nu	,Might also just be a wait timer for whatever time is input but I'm new to C programming
-08031140	,CheckIfBatteryFullYetMaybe_g_	,nu	,based on nearby strings
-080316a0	,enableAHB1PeriphClock_APB2PeriphClock_GPIO_g_	,nu	,
-08031754	,disableTIM2CR1-2_TIM3_TIM4_APB1PeriphClocks_g_	,nu	,
-08031790	,enableTIM2CR1_TIM3_TIM4_APB1PeriphClocks_g_	,nu	,
-080318e4	,waitForValueDMA2S7CR_g_	,nu	,
-080318f4	,setDMA2S7CR_g_	,nu	,
-08031950	,setDMA2S6CR_g_	,nu	,
-080319b4	,disableDMA2S6CR_DMA2S7CR_USART1DRnCR1-3_USART6DRnCR1-3_APB2PeriphClockCmd_g_	,nu	,
-080319fc	,USART1_to_GPIOA_pins9&10_COMPxOUT_transfer100dataItems_g_	,nu	,Enable RCC_APB2/AHB1 clocks. Config GPIOA pins 9&10 to be used as 'COMP1 OUT COMP2 OUT'. For USART1: Enable DMA tx/rx and enable USART. For DMA2.S5: Disable interrupts and proably clear all interrupt flags and maybe set peripheral-to-memory data transfer direction then set to transfer 100 data items (or more?) between GPIOA and USART1.
-08031b00	,UNKNOWN	,	,
-08031b4c	,UNKNOWN	,	,
-08031d3c	,UNKNOWN	,	,
-08031e20	,UNKNOWN	,	,
-08031e88	,UNKNOWN	,	,
-08032108	,sub_TIM2_IRQHandler	,nu	,Only called by TIM2_IRQHandler:08032cd0_f_
-08032218	,storeInSRAM03d4arrayAt5_g_	,nu	,
-08032224	,storeInSRAM03d4arrayAt6_g_	,nu	,
-08032230	,storeInSRAM03d4arrayAt7_g_	,nu	,
-0803223c	,storeInSRAM03d4arrayAt8_g_	,nu	,
-08032248	,storeInSRAM03d4arrayAt9_g_	,nu	,
-08032254	,storeInSRAM03d4arrayAtD_E_F_g_	,nu	,
-08032264	,storeInSRAM03d4arrayAt10_g_	,nu	,
-08032270	,storeInSRAM1404_g_	,nu	,
-0803227c	,UNKNOWN	,	,
-08032294	,I2C3_EV_IRQHandler_f_	,startup_stm32f427xx.s	,
-08032478	,I2C3_ER_IRQHandler_f_	,startup_stm32f427xx.s	,
-08032540	,decSRAM142cIfFull_g_	,nu	,
-08032550	,getSRAM142c_g_	,nu	,
-0803255c	,UNKNOWN	,	,
-08032598	,UNKNOWN	,	,
-080325c0	,disableI2cAndInitGPIOmaybe_g_	,nu	,based on associated functions
-08032618	,enableClocks_GPIO_I2c_g_	,nu	,based on associated functions
-080326d4	,UNKNOWN	,	,
-080326e8	,UNKNOWN	,	,simple return? or pointer/data?  referenced by main()
-080326ec	,UNKNOWN	,	,
-08032730	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings
-080327ac	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings
-08032864	,WorkWithCalibrationDataMaybe_g_	,nu	,based on nearby strings
-08032960	,main_f_	,startup_stm32f427xx.s	,Nu: Initializes stuff. Then prints out current firmware version info. Then checks battery. Then does TIM2 and I2C2 stuff. I believe the 'G-Core' stuff might happen inside FUN_0802afa4 while the STM32 waits in a loop at 08032a6a. If the loop exits at 08032a76 then the STM32 resets itself: GUI_GetBkColor disableTIM2CR1-2_TIM3_TIM4_APB1PeriphClocks disableDMA2S6CR_DMA2S7CR_USART1DRnCR1-3_USART6DRnCR1-3_APB2PeriphClockCmd saving something to flashmem and then disabling GPIOG.ODR0&1 GPIOE.ODR7&8 GPIOG.ODR11 GPIOE.ODR9&14 GPIOD.ODR4 GPIOF.ODR11 GPIOD.ODR3&2 GPIOE.ODR11 then it waits for GPIO.IDRs to be empty then turns off GPIOE.ODR11 again and then finally force-resets itself by sending VECTKEY with SYS RESET REQ to SCB.AIRCR.
-08032b84	,UNKNOWN	,	,
-08032ba0	,return-1_g_	,nu	,simple return function: 0xffffffff
-08032ba8	,UNKNOWN	,	,
-08032bb4	,return1_g_	,nu/ghidra	,simple return function: 0x01
-08032bb8	,return0_g_	,nu/ghidra	,simple return function: 0x00
-08032bbc	,UNKNOWN	,	,
-08032bf8	,SystemInit_f_	,startup_stm32f427xx.s	,
-08032c44	,SystemCoreClockUpdate	,fventuri	,
-08032cb4	,TIM2_IRQHandler_f_	,startup_stm32f427xx.s	,
-08032cec	,TIM4_IRQHandler_f_	,startup_stm32f427xx.s	,
-08032d1c	,resetSysTickMaybe_g_	,nu	,Called by a fxn which never itself is called??? - The VAL register contains the current value of the SysTick counter.  Bits 23:0 - A write of any value clears the field to 0 and also clears the COUNTFLAG bit in the STK_CTRL register to 0. [PM0214 p249 4.5.3 SysTick current value register (STK_VAL)]
-08032d4c	,sysTickDaemonMaybe_g_	,nu	,Maybe forces settings to some pin/peripheral memory registers while watching other registers (based on bitwise and similarity to 0802f9ac-0802fac4). 
-08032d84	,Reset_Handler_f_	,startup_stm32f427xx.s	,
-08032dd4	,Default_Handler_f_	,startup_stm32f427xx.s	,
-08032dd8	,arm_fill_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08032e14	,arm_copy_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08032e74	,arm_min_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08032f44	,arm_cfft_radix8by2_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-080330e8	,arm_cfft_radix8by4_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-080335a4	,arm_cfft_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08033698	,arm_fir_interpolate_init_q31_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a
-080336d0	,arm_fir_interpolate_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08033b08	,arm_fir_init_q31_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08033b2c	,arm_fir_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08033ff4	,arm_fir_decimate_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-0803436c	,arm_biquad_cascade_df1_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-0803450c	,arm_cmplx_mag_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-080346dc	,arm_sin_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.5.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08034764	,arm_cos_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-080347e4	,arm_scale_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08034850	,arm_radix8_butterfly_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a
-08034e14	,SRAM3384_GetStuff_g_	,nu/ghidra	,returns value stored in SRAM (0x20003384)? (also see SRAM3384_StoreStuff_g_nu_ below)
-08034e20	,__libc_init_array_f_	,startup_stm32f427xx.s	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08034e68	,memcpy_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08034e7e	,memset_g_	,symgrate	,
-08034e8e	,__cvt_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08034f50	,__exponent_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/hard/libc_nano.a
-08034fb8	,_printf_float_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08035438	,_printf_common_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08035524	,_printf_i_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08035748	,_scanf_float_g_	,symgrate	,
-08035b0c	,iprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a
-08035b3c	,_puts_r_g_	,symgrate	,
-08035bf4	,printString_g_	,nu	,based on associated strings
-08035c04	,setvbuf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08035d60	,nanf_g_	,symgrate	,
-08035d6c	,sniprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08035dd4	,siprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08035e14	,sulp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
-08035e50	,_strtod_l_g_	,symgrate	,
-08036a38	,strptime_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08036a58	,_strtoul_l.isra.0_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08036b50	,strftime_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a
-08036b74	,__swbuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08036c18	,__swsetup_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08036cf4	,quorem_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08036e10	,_dtoa_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08037980	,__sflush_r_g_	,symgrate	,
-08037a8c	,_fflush_unlocked_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08037ae0	,std_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08037b34	,__sfmoreglue_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08037b60	,__sinit_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a
-08037bc0	,__sfp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08037c38	,_fwalk_reent_g_	,symgrate	,
-08037c74	,rshift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08037ce8	,__hexdig_fun_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08037d12	,__gethex_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038154	,L_shift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08038178	,__match_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-080381a0	,__hexnan_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080382c0	,UNKNOWN	,	,
-080382c6	,UNKNOWN	,	,
-080382cc	,_localeconv_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a
-080382e8	,__swhatbuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038330	,__smakebuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-080383b0	,SRAM3384_StoreStuff_g_	,nu	,write _malloc_r result to SRAM (0x2000338 address)? (also see SRAM3384_GetStuff_g_nu_ above)
-080383c0	,__ascii_mbtowc_g_	,symgrate	,
-080383e4	,_Balloc_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-0803844c	,_Bfree_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-0803847a	,__multadd_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080384f0	,__s2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-0803856c	,__hi0bits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc.a
-080385aa	,__lo0bits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038608	,__i2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7-m/libc.a
-0803861a	,__multiply_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038748	,__pow5mult_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080387e4	,__lshift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-0803888c	,__mcmp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080388c0	,__mdiff_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-0803897c	,__ulp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080389cc	,__b2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038a68	,__d2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038b06	,__ratio_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038b6c	,__copybits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08038ba0	,__any_on_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08038be2	,_calloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08038c00	,_free_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038c9c	,_malloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08038d50	,__ssputs_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08038e04	,UNKNOWN	,	,
-08038ff4	,__sfputc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08039022	,__sfputs_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08039048	,UNKNOWN	,	,
-08039274	,_close_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08039294	,__sread_g_	,symgrate	,
-080392b6	,__swrite_g_	,symgrate	,
-080392ee	,__sseek_g_	,symgrate	,
-0803931a	,strncmp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08039358	,_execve_r_g_	,symgrate	,
-0803939c	,_fstat_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080393c0	,_close_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080393e0	,_execve_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-08039404	,memmove_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08039436	,simpleReturn_g_	,nu	,Just returns?
-08039438	,simpleReturn_g_	,nu	,Just returns?
-0803943a	,_realloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a
-08039488	,_execve_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-080394ac	,_malloc_usable_size_r_g_	,symgrate	,
-080394bc	,UNKNOWN	,	,
-0803953c	,UNKNOWN	,	,
-080395bc	,UNKNOWN	,	,
-08039640	,UNKNOWN	,	,
-08039734	,UNKNOWN	,	,
-080399fc	,acosf_g_	,symgrate	,/opt/symgrate2-archive/ti/ccs610/ccsv6/tools/compiler/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/lib/armv7-ar/thumb/fpu/libm.a
-08039a9c	,UNKNOWN	,	,
-08039c44	,UNKNOWN	,	,
-0803a1c4	,UNKNOWN	,	,
-0803a41c	,ANOTHER_SQRT_g_	,fventuri	,
-0803a424	,UNKNOWN	,	,
-0803a4e0	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a
-0803a9e4	,__kernel_sinf_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
-0803aa74	,return0	,nu	,
-0803aa78	,UNKNOWN	,	,
-0803aa86	,finitef_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7e-m/fpu/libc.a
-0803aa9c	,UNKNOWN	,	,
-0803ab50	,scalbnf_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-0803ac10	,nextafterf_g_	,symgrate	,also possibly copysignf
-0803ac28	,_init_g_	,symgrate	,
-0803ac34	,_initDuplicate_g_	,nu	,function is identical to 0803ac28
-	,	,	,
-	,	,	,
-Other Symbols	,	,	,
-0803b264-0803b65c	,PointerTableX_g_	,nu	,One of a few massive tables of pointers(?) to STM32 reserved memory addresses(?)
-0803bb74-0803be58	,PointerTable0_g_	,nu	,One of a few massive tables of pointers(?) - 3c/3d/3e/3fxxxxxx addresses
-0803be5c-0803bf24	,PointerTable1_g_	,nu	,One of a few massive tables of pointers(?) - 3a-3fxxxxxx & a6-a8xxxxxx addresses
-0803bf28-08078404	,PointerTable2_g_	,nu	,One of a few massive tables of pointers(?) - 3fxxxxxx/bfxxxxxx addresses (and probably others)
-0807842c-08078c27	,PossiblePointerTable0_g_	,nu	,Not as sure about this one since possible pointer(?) 3c-3fxxxxxx addresses don't repeat as much.
-08078c28-08079024	,PossiblePointerTable1_g_	,nu	,
-08079028-08079424	,PossiblePointerTable2_g_	,nu	,to bfxxxxxx-bcxxxxxx addresses
-08079ee8	,_sidata_f_	,startup_stm32f427xx.s	,
-0807d43f	,end of X6100_BBFW_V1.1.6_221112001.img (when loaded at 0x08020000)	,nu	,
-20000000	,RAMaddresses_f_	,stm32f427zg.pdf#page=86	,
-20000000	,_sdata_f_	,startup_stm32f427xx.s	,
-20003558	,_edata_f_	,startup_stm32f427xx.s	,
-20003558	,_sbss_f_	,startup_stm32f427xx.s	,
-20005910	,LargeArrayMaybe_SRAM5910_g_	,nu	,Used by a few different functions
-2000e20c	,_ebss_f_	,startup_stm32f427xx.s	,
-20030000	,_estack_f_	,startup_stm32f427xx.s	,
+ address	,function/certainty	,who found it	,notes	,proposed structs
+08000000	,flashmemstart/bootloader_g_	,stm32f427zg.pdf#page=86	,based on G90 & STM32	,
+08020000	,ptr_MasterStack_f_firmware_base_f_	,startup_stm32f427xx.s	,	,
+08020004	,ptr_ResetHandler_f_	,DUI0553-1.pdf vectormap	,Should lead to main function / Exception #1	,
+08020008	,ptr_NMI_f_	,DUI0553-1.pdf vectormap	,Exception #2	,
+0802000C	,ptr_HardFault_f_	,DUI0553-1.pdf vectormap	,Exception #3	,
+08020010	,ptr_MemoryManagementFault_f_	,DUI0553-1.pdf vectormap	,Exception #4	,
+08020014	,ptr_BusFault_f_	,DUI0553-1.pdf vectormap	,Exception #5	,
+08020018	,ptr_UsageFault_f_	,DUI0553-1.pdf vectormap	,Exception #6	,
+0802001C	,ptr_Reserved_f_	,DUI0553-1.pdf vectormap	,Exception #7-10	,
+0802002C	,ptr_SVCall_f_	,DUI0553-1.pdf vectormap	,Exception #11	,
+08020030	,ptr_ReservedForDebug_f_	,DUI0553-1.pdf vectormap	,Exception #12	,
+08020034	,ptr_Reserved_f_	,DUI0553-1.pdf vectormap	,Exception #13	,
+08020038	,ptr_PendSV_f_	,DUI0553-1.pdf vectormap	,Exception #14	,
+0802003C	,ptr_Systick_f_	,DUI0553-1.pdf vectormap	,Exception #15	,
+08020040	,ptr_IRQ0_f_	,DUI0553-1.pdf vectormap	,Exception #16	,
+08020044	,ptr_IRQ1_f_	,DUI0553-1.pdf vectormap	,Exception #17	,
+08020048	,ptr_IRQ2_f_	,DUI0553-1.pdf vectormap	,Exception #18	,
+080201d4	,checksForSpecial_initParameterMaybe_g_	,nu	,If a nearby dword holds a value then concatenate _init address with a value from SRAM?	,
+080201f0	,arm_bitreversal_32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.5.0.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a	,"void arm_bitreversal_32(uint *pSrc,uint bitRevLen,uint *pBitRevTab)"
+0802025a	,arm_bitreversal_32_g_	,symgrate	,	,"void arm_bitreversal_32(uint *pSrc,uint bitRevLen,uint *pBitRevTab)"
+080202b0	,STRLEN_g	,fventuri/symgrate	,	,
+080202c0	,memchr	,fventuri	,	,
+08020360	,__aeabi_drsub_g_	,symgrate	,	,
+08020368	,__aeabi_dsub_g_	,symgrate	,	,
+0802036c	,__aeabi_dadd_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+080205e4	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020604	,__aeabi_ui2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020628	,__aeabi_f2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+0802066c	,__aeabi_ul2d_g_	,symgrate	,	,
+0802067c	,__aeabi_l2d_g_	,symgrate	,	,
+080206d8	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+080208b4	,sub__aeabi_dmul:080206f4_g_	,nu	,Is only called by __aeabi_dmul:080206f4	,
+0802092c	,__aeabi_dmul_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020a9a	,sub__aeabi_dmul:08020948_g_	,nu	,Is only called by __aeabi_dmul:08020948	,
+08020b0c	,__eqdf2_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020b88	,__aeabi_cdrcmple_g_	,symgrate	,	,
+08020b98	,__aeabi_cdcmple_g_	,symgrate	,	,
+08020ba8	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something	,
+08020bbc	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something	,
+08020bd0	,run__aeabi_cdcmpleAndStuff_g_	,nu	,run __aeabi_cdcmple and return something	,
+08020be4	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something	,
+08020bf8	,run__aeabi_cdrcmpleAndStuff_g_	,nu	,run __aeabi_cdrcmple and return something	,
+08020c0c	,__aeabi_dcmpun_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020c38	,__aeabi_d2iz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020c88	,__aeabi_d2uiz_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020cc8	,UNKNOWN	,	,	,
+08020d68	,__aeabi_uldivmod_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7-ar/fpv3/hard/libgcc.a	,
+08020d98	,__udivmoddi4_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a	,
+08021068	,SQRT_g_	,fventuri	,	,
+0802108c	,sub1_FUN_08022710	,nu	,Only used by FUN_08022710	,
+080210a8	,ATAN2_DEGREES_g_	,fventuri	,	,
+08021188	,sub2_FUN_08022710	,nu	,Only used by FUN_08022710	,
+080211a8	,sub3_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021200	,sub4_FUN_08022710	,nu	,Only used by FUN_08022710	,
+0802129c	,sub5_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021338	,sub6_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021390	,sub7_FUN_08022710	,nu	,Only used by FUN_08022710	,
+080213ec	,sub8_FUN_08022710	,nu	,Only used by FUN_08022710	,
+0802148c	,sub9_FUN_08022710	,nu	,Only used by FUN_08022710. Called twice.	,
+080214e0	,UNKNOWN	,	,Only called by DMA1_Stream3_IRQHandler_f_ & FUN_08022710. Called multiple times by both.	,
+0802166c	,sub10_FUN_08022710	,nu	,Only used by FUN_08022710: Stores/processes data in SRAM (input is either SRAM9294 or SRAM942C or SRAM9aa8)	,
+080216f8	,sub11_FUN_08022710	,nu	,Only used by FUN_08022710	,
+080219f4	,sub12_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021a58	,sub13_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021ac8	,sub_DMA1_Stream3_IRQHandler	,nu	,Only used by DMA1_Stream3_IRQHandler_f_	,
+08021e28	,sub14_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021e70	,sub15_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08021fd0	,sub16_FUN_08022710	,nu	,Only used by FUN_08022710	,
+080221ec	,sub17_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08022244	,_HTTPServer_sleepms_g_	,symgrate	,I think _HTTPServer_sleepms might be incorrect. Only called by DMA1_Stream3_IRQHandler_f_.  /opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a	,
+0802252c	,sub18_FUN_08022710	,nu	,Only used by FUN_08022710	,
+08022658	,sub_FUN_08032108	,nu	,Only used by FUN_08032108	,
+08022684	,add1.0AndStoreInSRAM9c40_g_	,nu	,Only used by FUN_0802afa4	,
+08022698	,UNKNOWN	,	,Only used by FUN_0802afa4	,
+08022710	,UNKNOWN	,	,Stores a ton of stuff in a large array in SRAM5910. Only used by GPIO_EG_DataRegisters_I2cStuff_g_:08023b86	,
+080230a4	,changeSRAM5910[0x4d92]from0to4_thenwait100_g_	,nu	,Only used by FUN_0802afa4.  If SRAM5910[4d92] is 0 then set it to 4 and wait 100ms (exit loop early if SRAM5910[4d92] gets set back to 0).	,
+080230dc	,return_g_	,nu	,	,
+080230e0	,storeInSRAM5910array[0x8148]_OrZeroSRAM5910[0x4d5d-0x4d5e]_g_	,nu	,If input is 0 then zero SRAM5910[0x4d5d] & SRAM5910[0x4d5e]. Otherwise store the input into SRAM5910array[0x8148]	,
+080230fc	,UNKNOWN	,	,stores stuff in SRAM	,
+08023124	,UNKNOWN	,	,08023124/08023180 are very similar	,
+08023180	,UNKNOWN	,	,08023124/08023180 are very similar	,
+080231e8	,UNKNOWN	,	,080231e8 & 08023208 are very similar	,
+08023208	,UNKNOWN	,	,080231e8 & 08023208 are very similar	,
+08023228	,storeInSRAM5910array[0x4fbd]_thenFlipBitInSRAM5910array[0x4fc4]_g_	,nu	,	,
+08023248	,storeInSRAM5910array[0x4fc2]	,nu	,	,
+08023268	,storeInSRAM5910array[0x4fbf]_thenFlipBitInSRAM5910array[0x4fc4]_g_	,nu	,	,
+08023288	,UNKNOWN	,	,	,
+080232f4	,UNKNOWN	,	,	,
+080233d8	,UNKNOWN	,	,	,
+08023444	,RelatedToSettingAGCmodeMaybe_g_	,nu	,base on nearby strings	,
+08023760	,UNKNOWN	,	,	,
+080237e8	,printfAnArrayContainingFourInputFilterSettings_g_	,nu	,Loads input[0-1-2-3] into SRAM5910[0x4fac-0x4fb0-0x4fb4-0x4fb8] then printf's these values to '\r\nfilter1[%04ld_ %04ld]; filter2[%04ld_ %04ld]'.  Input array probably holds filter settings - each one four bytes long.	,
+08023868	,storeInSRAM5910array[0x59cd]	,nu	,	,
+08023878	,storeVectorAsFloatInSRAMb350_g_	,nu	,Also truncates the vector to a max value of 100	,
+08023894	,storeInSRAM5910array[0x80c4]	,nu	,	,
+080238a8	,UNKNOWN	,	,	,
+080239d8	,UNKNOWN	,	,	,
+080239f8	,storeInSRAM5910+0x8194_akaSRAMdaa4_g_	,nu	,	,
+08023a08	,storeInSRAM5910+0x8198_akaSRAMdaa8_g_	,nu	,	,
+08023a18	,storeInSRAM5910array[0x4d60]	,nu	,	,
+08023a28	,storeInSRAM5910array[0x4d61]	,nu	,	,
+08023a38	,storeInSRAM5910array[0x4d63]	,nu	,	,
+08023a48	,UNKNOWN	,	,	,
+08023ae4	,storeInSRAM5910+0x4d70_akaSRAMa680	,nu	,	,
+08023af4	,storeInSRAM5910array[0x4d90]	,nu	,	,
+08023b04	,storeInSRAM5910array[0x4ddc]	,nu	,	,
+08023b14	,returnSRAMda68_aka_in_r0_g_	,nu	,Returns stack pointer maybe? ('return in_r0'): Returns SRAMda68 via 'vldr' (SRAMda68 is written to multiple times by function DMA1_Stream3_IRQHandler)	,
+08023b20	,returnSRAMdad8_aka_in_r0_g_	,nu	,ibid	,
+08023b2c	,returnSRAMda88_aka_in_r0_g_	,nu	,ibid	,
+08023b38	,enableSysTickDaemonIfSRAMDA5AisZero_g_	,nu	,Switches on FUN_08032d4c (sysTickDaemonMaybe_g_nu_) if SRAMda88 is 0	,
+08023b70	,returnSRAM5910array[0x4d5e]	,nu	,	,
+08023b80	,GPIO_EG_DataRegisters_I2cStuff_g_	,nu	,Switches off GPIOG_ODR8/GPIOE_ODR15 then enables SysTickDaemon_g_ and then switches them back on. Then does I2C stuff with GPIOE and GPIOG input/output data type registers.	,
+08023bf0	,DMA1_Stream3_IRQHandler_f_	,startup_stm32f427xx.s	,might be __kernel_rem_pio2 ? /opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib/rtsv7A8_T_le_n_v3_eabi.lib	,
+08027ef0	,UNKNOWN	,	,	,
+08027f34	,UNKNOWN	,	,	,
+08027fac	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a	,
+08028380	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a	,
+08028e88	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a	,
+08029474	,getSRAM3574array5value_g_	,nu	,SRAM3574 must hold an array	,
+08029480	,getSRAM3574array4value_g_	,nu	,SRAM3574 must hold an array	,
+0802948c	,getSRAM3574array6value_g_	,nu	,SRAM3574 must hold an array	,
+08029498	,compareGPIO_x_registerValsMaybe_g_	,nu	,   Takes an array of GPIO_x register values? Checks one of them and stores result in SRAMe1a8? (Possible registers include: OTYPER OSPEEDR PUPDR IDR ODR and BSRR) Then compares the other?	,
+080295f0	,UNKNOWN	,	,SRAMe1a8array might be a jump table	,
+080296b4	,compareSRAMe1a8_GPIOregisterValsMaybe_g_	,nu	,Similar to FUN_08029498 but compares values in SRAMe1a8array. Also sets lowest SRAM bytes and some arrays.	,
+08029958	,UNKNOWN	,	,	,
+080299b0	,UNKNOWN	,	,Might do something with data and the bootloader (based on input address and being at end of the STM32 restart segment in main)	,
+080299f4	,FLASH_memoryReadWriteMaybe_g_	,nu	,base on nearby strings	,
+08029a70	,UNKNOWN	,	,	,
+08029a84	,GPIO_x_OutputDataRegisters_ConfigureStuff_nu_	,nu	,fxn(GPIOaddr settingbits bool) performs bitwise AND or OR on GPIOx_ODR's bits.	,
+08029a98	,UNKNOWN	,	,	,
+08029b00	,GPIO_BCG_GPIOC-ODR5logic_nu_	,nu	,Called only by _HTTPServer_sleepms: Turn off GPIO_G_ODR6. Figure out if GPIOC_ODR5 should be on or off. Flip GPIO_B_ODR0 on-off before every conditional.  Then turn on GPIO_G_ODR6 at end.	,
+08029f08	,GPIO_BCG_jiggleGPIOC-ODR5toOff_nu_	,nu	,GPIOG_ODR6 off. GPIOC_ODR5 off-off-off-on-on-off-on-off.  GPIOG_ODR6 on.  GPIOB_ODR0 is switched on-off after GPIOC_ODR5 state change.	,
+0802a0b4	,GPIO_BC_GPIOC-ODR5toOnIfLargeInput_nu_	,nu	,If input bit-shifted 26-31 bits left is < 0 (not sure if input var is 32bits?) then GPIOC_ODR5 on - else GPIOC_ODR5 off.  Flip GPIOB_ODR0 on-off after every conditional.  Flip GPIOB_ODR1 on-off at end.	,
+0802a234	,UNKNOWN	,nu	,Only used by GCOREmaybe_g_:0802afa4: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable or enable that register.	,
+0802a258	,UNKNOWN	,nu	,Only used by _HTTPServer_sleepms:0802a668: SRAMe1dc which is passed into this function probably holds a register of some kind. This function seems to disable that register.	,
+0802a260	,UNKNOWN	,	,	,
+0802a3f4	,subGCORE_DACch2stuff_needsResearch	,nu	,	,
+0802a658	,GUI_GetBkColor_g_	,symgrate	,I'm not sure this one was ID'd correctly by Symgrate. /opt/symgrate2-archive/KeilPacks/Keil.STM32F4xx_DFP.2.2.0.pack/Middlewares/ST/STemWin/Lib/STemWin524b_CM4_GCC_ot.a	,
+0802a668	,_HTTPServer_sleepms_g_	,symgrate	,/opt/symgrate2-archive/ti/ns_2_60_00_07/source/ti/net/http/lib/gcc/m4/httpserver_debug.a	,
+0802a920	,IS_BIT_SET_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/middleware/MTK/camera/lib/libdrv_idp.a	,
+0802ab70	,OSMboxPostOpt_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/EmbeddedOffice.Flexible_Safety_RTOS.1.0.0.pack/Lib/cortex-m4f_gcc/cert-mpu_cortex-m4f_gcc.a	,
+0802ae48	,switchTheseBitsOffOrOnInSRAM03d4_g_	,nu	,Takes binary and bool as input: Binary tells us which bits to switch in SRAM03d4 and bool tells us Off or On.  These bits are used later by only FUN_08032108.	,
+0802af38	,UNKNOWN	,	,	,
+0802afa4	,GCOREmaybe_g_	,nu	,Takes (*SRAM008c *SRAM01b0) as inputs and returns 1 or 0 at various stages. The main() fxn appears to hold here in a while TRUE loop (and if loop exits then STM32 resets): Accesses STM32 Reserved6 memory and SRAM and GPIOA's port output data register. Does some battery stuff. Prints 'agc_mode_updated' 'txpower_updated' 'nre:%d nrthr:%d' and 'dnfe:%d dnfcnt:%d dnfwidth:%d'.  Also saves/reads from bootloader(?) at 08004000	,
+0802c508	,GPIO_F_MAYBE_flipOSPEEDRyOffOrOnMaybe_g_	,nu	,SRAM01b0 does hold GPIO_F at one point in Main (after it holds firmware date). If GPIOF is in SRAM then 0x8 is the OSPEEDR offset and param_1 is y.	,
+0802c520	,UNKNOWN	,	,Returns a value in (ptr_SRAM008c+0x10c)+0xdc	,
+0802c5ac	,BatteryChargerLogicMaybe_g_	,	nu,	,
+0802c8d4	,TIM3_IRQHandler_f_	,startup_stm32f427xx.s	,	,
+0802cc74	,NVIC_PriorityGroupConfig	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p191:line00111] AIRCR_VECTKEY_MASK=0x05FA0000. {Writes VECTKEY=0x5FA and PRIGROUP=0b101 (VectReset-VectClrActive-SysResetReq are kept to defaults). 'To write to this register you must write 0x5FA to the VECTKEY' (VECTKEY is the upper 16 bits). pm0214-stm32-cortexm4-mcus-and-mpus-programming-manual-stmicroelectronics.pdf p228}	,"void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup)"
+0802cc88	,NVIC_Init	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p191:line00129] {Sets NVIC_ICERx then stores SCB_AIRCAR.PRIGROUP bits into a variable and then sets NVIC_IPRx then set NVIC_ISERx [pm0214 p208]}	,"void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)"
+0802cce4	,ADC_Init	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p225:line00228] {ADCx_CR1: CR1_CLEAR_MASK Turn off SCAN AWDEN JAWDEN. ADCx_CR2: CR2_CLEAR_MASK Set channel sequence length to one conversion? ADCx_SQR1: SQR1_L_RESET and do some other stuff [rm0090 p415]}	,"void ADC_Init(ADC_TypeDef* ADCx, ADC_InitTypeDef* ADC_InitStruct)"
+0802cd30	,ADC_CommonInit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00334] {Sets Analog-to-digital converter common control register (ADC_CCR) [rm0090 p427]: ADC_CCR:ADCPRE='PCLK2 divided by 2'. ADC_CCR:DMA='Direct memory access mode disabled'. ADC_CCR:DELAY='5*TADCCLK'. ADC_CCR:MULTI='Independent mode'. CR_CLEAR_MASK=0xFFFC30E0}	,"void ADC_CommonInit(ADC_CommonInitTypeDef *ADC_CommonInitStruct)"
+0802cd58	,ADC_Cmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00392] {Takes inputs (ADCyPtr bool) and toggles ADCy_CR2:ADON bit [rm0090 p420]: Either Disables ADC conversion and go to power down mode OR Enables ADC.}	,"void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState)"
+0802cd6c	,ADC_RegularChannelConfig	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p221:line00708] {Takes (ADCyPTR num1 num2 num3). Define ADC channels with sampling cycle times & number/sequence of conversions: Sets SMPR2=ADC sample time register 2 [rm0090 p420] OR SMPR1=ADC sample time register 1 [rm0090 p420]. Also sets SQR1=ADC regular sequence register 1 [rm0090 p423] OR SQR1=ADC regular sequence register 1 [rm0090 p423]. Also sets SQR3=ADC regular sequence register 3 [rm0090 p423].}	, "void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime)"
+0802cdf8	,ADC_SoftwareStartConv	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00828] {Takes (ADCyPtr). Enables ADCy_CR2:SWSTART [rm0090 p418]: Starts conversion of regular channels. Note: This bit is set by software to start conversion and cleared by hardware as soon as the conversion starts. Note: This bit can be set only when ADON = 1 otherwise no conversion is launched.}	,"void ADC_SoftwareStartConv(ADC_TypeDef* ADCx)"
+0802ce04	,ADC_DMACmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p225:line01045] {Takes (ADCyPtr bool). Toggles ADCy_CR2:DMA [rm0090 p419]: Direct memory access mode (for single ADC mode). Refer to the DMA controller chapter for more details.}	,"void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState)"
+0802ce18	,ADC_DMARequestAfterLastTransferCmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line1069] {Decides to accept more ADC DMA requests or not (after the last transfer is completed): CR2:DDS (DMA disable selection for single ADC mode) = 0 (No new DMA request is issued after the last transfer as configured in the DMA controller) OR CR2:DDS (DMA disable selection for single ADC mode) = 1 (DMA requests are issued as long as data are converted and DMA=1).}	,"void ADC_DMARequestAfterLastTransferCmd(ADC_TypeDef* ADCx, FunctionalState NewState)"
+0802ce2c	,CRC_ResetDR	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00049] {Resets the CRC calculation unit and sets the data register to 0xFFFF FFFF. [rm0090 p115 4.4.3 Control register (CRC_CR)]}	,"void CRC_ResetDR(void)"
+0802ce38	,CRC_CalcBlockCRC	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p264:line00073] {Not sure what this is but involves looping through a pointer to CRC.}	,"uint32_t CRC_CalcBlockCRC(uint32_t pBuffer,uint32_t BufferLength)"
+0802ce58	,DAC_DeInit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00180] RCC_APB1_Peripherals defined on p627:line00703: 0x20000000 = RCC_APB1Periph_DAC. {Sending/not-sending 0x20000000 in binary to RCC APB1 peripheral reset register (RCC+0x20) probably triggers DACRST (from Section 7.3.8 [rm0090 p237])}	,"void DAC_DeInit(void)"
+0802ce74	,DAC_Init	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00199] CR_CLEAR_MASK=0x00000FFE {Probably turns off DAC_CR:ENx (DAC channelx enable/disable) DAC_CR:DMAUDRIEx (DAC channelx DMA Underrun Interrupt enable/disable) DAC_CR:DMAENx (DAC channelx DMA enable/disable).}	,"void DAC_Init(uint32_t DAC_Channel, DAC_InitTypeDef* DAC_InitStruct)"
+0802cea4	,_ZN11__gnu_debug19_Safe_iterator_base8_M_resetEv_g_	,symgrate	,	,
+0802ceb0	,DAC_Cmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00259] DAC_CR bit 0 is register EN1 {Sets or unsets bits (similar to GPIO_x_ODR configs 0802fa00-0802faa8)}	,"void DAC_Cmd(uint32_t DAC_Channel, FunctionalState NewState)"
+0802ced0	,subGCORE_DACch2start_needsResearch	,nu	,Sets up array SRAM008c and DACch2 and then triggers DACch2 (SRAM008c seems to hold some kind of large array used by GCORE). Sets DAC_SWTRIGR:SWTRIG2=1 (DAC channel2 software trigger enabled) [rm0090 p448]	,
+0802cef0	,DAC_SetChannel1Data	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p300:line00371] {Takes (zero & zero). Sets DAC:DHR12R1 (DAC channel 1 12-bit right-aligned data holding register) with a given value (which in our program is always 0). [rm0090 p448]}	,"void DAC_SetChannel1Data(uint32_t DAC_Align, uint16_t Data)"
+0802cf10	,DAC_SetChannel2Data	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p300:line00396] Takes (zero & value). Sets DAC:DHR12R2 (DAC channel 2 12-bit right-aligned data holding register) with a given value. [rm0090 p450]	,"void DAC_SetChannel2Data(uint32_t DAC_Align, uint16_t Data)"
+0802cf30	,sub_DMA1_Stream3_IRQHandler	,nu	,remove the top 12 and the bottom 19 bits of a value (using bit shifting)	,
+0802cf38	,DMA_checkInterruptsMaybe_g_	,nu	,fxn(choosesDMA1orDMA2 setting)	,
+0802cf74	,DMA_ClearITPendingBit_p_	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p347:line01245] RESERVED_MASK=0x0F7D0F7D {fxn(ptrDMAx.SxCR_choosesDMA2or1 clearHIFCRorLIFCRprobably). STM32F4xx Reference Manual p327: The two DMA controllers have 16 streams in total (8 for each controller). 10.5.3 DMAx low interrupt flag clear register (DMA_LIFCR) address offset 0x08. 10.5.4 DMAx high interrupt flag clear register (DMA_HIFCR) address offset 0x0C.  0000 1111 0111 1101 clears all flags (TCIFx/HTIFx/TEIFx/DMEIFx/CFEIFx) #-# in DMAx_HISR/LISR.}	,"void DMA_ClearITPendingBit(DMA_Stream_TypeDef* DMAy_Streamx, uint32_t DMA_IT)"
+0802cfa4	,DMA_SxCR&SxFCR_toggleInterrupts_g_	,nu	,Only enables DMA1:S3 Transfer Complete Interrupts & FIFO Error Interrupts in our firmware [DMA1_S3FCR:FEIE = 1 & DMA1_S3CR:TCIE = 1  p325].	,
+0802cfe4	,DMA_moreInterruptsToggleStuffProbably_g_	,nu	,Is only called by DMA1_Stream3_IRQHandler:08023bfe. Looks like other functions. Didnt seem worth completely looking into.	,
+0802d038	,DMA_clearAllInterruptFlagsInDMAxHIFCRorLIFCR_g_2	,nu	,Duplicate of 0802cf74 (has different pointers but those pointers go to the same addresses)	,
+0802d068	,FLASH_Unlock	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00402] {'The Flash key register is used to allow access to the Flash control register and so to allow program and erase operations. The following values must be programmed consecutively to unlock the FLASH_CR register and allow programming/erasing it: a) KEY1 = 0x45670123  b) KEY2 = 0xCDEF89AB  ... The Flash control register is used to configure and start Flash memory operations.' [Reference Manual rm0090 p98: 3.9 Flash interface registers]}	,"void FLASH_Unlock(void)"
+0802d088	,FLASH_OB_Unlock	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00962] {The Flash option key register is used to allow program and erase operations in the user configuration sector.  The following values must be programmed consecutively to unlock the FLASH_OPTCR register and allow programming it:  a) OPTKEY1 = 0x08192A3B  b) OPTKEY2 = 0x4C5D6E7F}	,"void FLASH_OB_Unlock(void)"
+0802d0a8	,FLASH_checkstatus1_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.	,
+0802d178	,FLASH_checkstatus2_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.	,
+0802d230	,sub_FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy. Sub-sub of flashmem read/write functions.	,
+0802d2d8	,FLASH_checkstatus3_g_	,nu	,check if flashmem write/erase is busy.	,
+0802d3e8	,FLASH_checkstatus4_g_	,nu	,check if flashmem write/erase is busy. Sub of flashmem read/write functions.	,
+0802d4c8	,GPIO_Init	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p517:line00195]	,"void GPIO_Init(GPIO_TypeDef *GPIOx,GPIO_InitTypeDef *GPIO_InitStruct)"
+0802d564	,GPIO_SetBits	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p518:line00405]	,"void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)"
+0802d568	,GPIO_ResetBits	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p518:line00426]. BSRR+0x2 = Just the BRy registers (BSRR+0x0 = BSy registers). [rm0090 p284]	,"void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)"
+0802d56c	,GPIO_PinAFConfig	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p519:line00572] Configures a GPIO pin to be used for an alternate function.	,"void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_PinSource, uint8_t GPIO_AF)"
+0802d598	,I2C_DeInit	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00130]	,"void I2C_DeInit(I2C_TypeDef* I2Cx)"
+0802d604	,I2C_Init	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00173]	,"void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct)"
+0802d6d8	,I2C_Cmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00306]	,"void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState)"
+0802d6f0	,I2C_GenerateSTART	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00392]	,"void I2C_GenerateSTART(I2C_TypeDef* I2Cx, FunctionalState NewState)"
+0802d708	,I2C_GenerateSTOP	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00416]	,"void I2C_GenerateSTOP(I2C_TypeDef* I2Cx, FunctionalState NewState)"
+0802d720	,I2C_Send7bitAddress	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00444]	,"void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction)"
+0802d738	,I2C_AcknowledgeConfig	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00471] sets I2C_CR1.ACK=0 or 1 [rm0090 p860]	,"void I2C_AcknowledgeConfig(I2C_TypeDef* I2Cx, FunctionalState NewState)"
+0802d750	,I2C_StretchClockCmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00595]	,"void I2C_StretchClockCmd(I2C_TypeDef* I2Cx, FunctionalState NewState)"
+0802d768	,I2C_SendData	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00749]	,"void I2C_SendData(I2C_TypeDef* I2Cx, uint8_t Data)"
+0802d76c	,I2C_ReceiveData	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line00762]	,"uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx)"
+0802d774	,I2C_ITConfig	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line01092]	,"void I2C_ITConfig(I2C_TypeDef* I2Cx, uint16_t I2C_IT, FunctionalState NewState)"
+0802d788	,I2C_CheckEvent_g_	,fventuri	,Might need to look at his function again. [stm32f4xx_dsp_stdperiph_lib_um.chm p556:line01151]	,
+0802d7a0	,I2C_GetFlagStatus_g_	,fventuri	,Might need to look at his function again. [stm32f4xx_dsp_stdperiph_lib_um.chm p556:line01263]	,
+0802d7d8	,I2C_GetITStatus	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p556:line01374]	,"ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT)"
+0802d7f4	,subI2C3_ER_IRQHandler	,nu	,	,
+0802d7fc	,storeIn420e0020_g_	,nu	,Only used by CheckIfBatteryFullYetMaybe_g_: Stores 1 at beginning of that function and stores 0 at the end. Address 0x420e0020 seems to be in the Reserved section (of the CortexM4 Block 2 Perpherals memory map)	,
+0802d808	,RCC_GetClocksFreq	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p633:line01277] {Does stuff with RCC.CFGR & RCC.PLLCFGR. Called by startup functions for I2C & clocks. Also called by a USARTx_setGPIOx function.}	,"void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks)"
+0802d898	,RCC_AHB1PeriphClockCmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p634:line02097]	,"void RCC_AHB1PeriphClockCmd(uint32_t RCC_AHB1Periph, FunctionalState NewState)"
+0802d8b0	,RCC_APB1PeriphClockCmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p634:line02216]	,"void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)"
+0802d8c8	,RCC_APB2PeriphClockCmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p634:line02268]	,"void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)"
+0802d8e0	,RCC_APB1PeriphResetCmd	,fventuri	,[stm32f4xx_dsp_stdperiph_lib_um.chm p636:line02420]	,"void RCC_APB1PeriphResetCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)"
+0802d8f8	,RCC_APB2PeriphResetCmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p636:line02467]	,"void RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)"
+0802d910	,SPI_Init	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p757:line00277] SPI CR1_CLEAR_MASK=0x3040 [stm32f4xx_dsp_stdperiph_lib_um.chm p757]. SPI_I2SCFGR.I2SMOD = 0 = SPI mode.,"void SPI_Init(SPI_TypeDef *SPIx,SPI_InitTypeDef *SPI_InitStruct)"
+0802d950	,I2S_Init	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p757:line00341] I2SCFGR_CLEAR_MASK=0xF040. RCC_CFGR.I2SSCR=0(=PLLI2S clock used as I2S clock source) [rm0090 p165]. HSI_VALUE=0x00F42400. HSE_VALUE is not in documentation but is probably 0x017D7840. RCC_PLLCFGR_PLLM=0x0000003F. I2S_MCLKOutput_Enable=0x0200. {Use audio PLL (aka PLLI2S) clock as I2S clock source [RCC_CFGR:I2SSRC=0 p228] - then check to see if HSI or HSE oscillator are is used for PLL main/audio clocks [RCC_PLLCFGR:PLLSRC p163].}	,"void I2S_Init(SPI_TypeDef* SPIx, I2S_InitTypeDef* I2S_InitStruct)"
+0802da2c	,SPI_Cmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00551] [rm0090 p916-917] SPI_CR1.SPE=0 = Peripheral disabled. SPI_CR1.SPE=1 = Peripheral enabled. This bit is not used in I2S mode.	,"void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState)"
+0802da44	,I2S_Cmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00576] {Sets any given SPI or I2S to enabled or disabled peripheral (except doesnt work on SPI) [SPI_I2SCFGR.I2SE p922]}.	,"void I2S_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState)"
+0802da5c	,I2S_FullDuplexConfig	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p737:line00741] I2SCFGR_CLEAR_MASK=0xF040. I2S_Mode_SlaveRx=0x0100. I2S_Mode_SlaveTx=0x0000. {I2S2_ext an I2S3_ext are used only in full-duplex mode. [rm0090 p900]. GPIOx [rm0090 p281].}	,"void I2S_FullDuplexConfig(SPI_TypeDef* I2Sxext, I2S_InitTypeDef* I2S_InitStruct)"
+0802da9c	,SPI_I2S_DMACmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p185:line01023] {Toggles SPI&I2S CR2 settings given (SPI/I2Sregister CR2setting on/off). setting=[0000 0000 0000 0001 = RXDMAEN is 1 = Rx buffer DMA enabled]  OR  [0000 0000 0000 0010 = TXDMAEN is 1 = Tx buffer DMA enabled].}	,"void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, uint16_t SPI_I2S_DMAReq, FunctionalState NewState)"
+0802dab0	,TIM_DeInit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p634:line00193]	,"void TIM_DeInit(TIM_TypeDef* TIMx)"
+0802dc68	,TIM_TimeBaseInit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00281] Only used by FUN08031790. Needs more research.	,"void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct)"
+0802dcfc	,TIM_ARRPreloadConfig	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00515] Only used by FUN08031790: TIMx_CR1.ARPE (Auto-reload preload enable) [rm0090 p561] enable/disable buffering.	,"void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState)"
+0802dd14	,TIM_Cmd	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line00585] Enables or disables counter (TIMx_CR1.CEN) [rm0090 p561]: External clock gated mode and encoder mode can work only if the CEN bit has been previously set by software	,"void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState)"
+0802dd2c	,TIMx_CCER_CCMR1_configure_g_	,nu	,Sets Output Capture/Compare channels 1 & 2.	,
+0802de84	,TIM_ITConfig	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p817:line02365] Disables interrupts for break trigger COM and Capture/Compare 4-1 (BIE TIE COMIE CC4IE CC3IE CC2IE CC1IE) but keeps update interrupts (UIE) enabled. [rm0090 p568]	,"void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState)"
+0802de98	,TIM_ClearITPendingBit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p817:line02547] based on TIM3_IRQHandler. {Clears other interrupt flags (BIF TIF COMIF CC4IF CC3IF CC2IF UIF) and sets one flag (in our program only sets CC1IF). [rm0090 p570]}	,"void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT)"
+0802dea0	,TIM_GetITStatus	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p817:line02506] {Queries TIMx_SR & TIMx_DIER and returns 1 if a queried channel had an interrupt enabled/flagged. [rm0090 p570]}	,"ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, uint16_t TIM_IT)"
+0802deb8	,TIM_ClearITPendingBit	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p817:line02547] Probably a duplicated of FUN_0802de98.   	,"void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT)"
+0802dec0	,TIM_SelectInputTrigger	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line02885] Takes (ptrTIMx setting). Sets TIMx_SMCR.TS to 'setting' and all other TIMx_SMCR bits to 1. p566	,"void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource)"
+0802ded0	,TIM_SelectSlaveMode	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line02952] Takes (ptrTIMx setting). Turns off all Slave Mode Selection (SMS) bits then sets SMS bits with 'setting'. (In our program only sets SMS to 'Reset Mode'). p567	,"void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode)"
+0802dee4	,TIM_SelectMasterSlaveMode	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p171:line02975] {Takes (ptrTIMx setting). Turns off TIMx_SMCR.MSM (Master/slave mode). Then sets MSM with 'setting'. [rm0090 p566]}	,"void TIM_SelectMasterSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_MasterSlaveMode)"
+0802def8	,USART_Init_p_	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p845:line0802def8] USART_CR1_CLEAR_MASK=0xE9F3  USART_CR3_CLEAR_MASK=0xFCFF {based on input vars and association with FUN_080319fc}	,"void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct)"
+0802dfb8	,UNKNOWN	,	,	,
+0802e1ba	,UNKNOWN	,	,	,
+0802e344	,I2C_DataStuff_g_	,nu	,base on nearby strings	,
+0802e3f4	,UNKNOWN	,	,	,
+0802e4a8	,UNKNOWN	,	,	,
+0802e55c	,UNKNOWN	,	,	,
+0802e5c4	,UNKNOWN	,	,	,
+0802e62c	,UNKNOWN	,	,	,
+0802e738	,UNKNOWN	,	,	,
+0802e784	,UNKNOWN	,	,	,
+0802e7c8	,UNKNOWN	,	,	,
+0802e80c	,UNKNOWN	,	,	,
+0802ec88	,UNKNOWN	,	,	,
+0802ec98	,SomethingToDoWithChargeControllerbq24715_g_	,nu	,based on nearby strings	,
+0802edec	,UNKNOWN	,	,	,
+0802edf0	,UNKNOWN	,	,	,
+0802ee54	,UNKNOWN	,	,	,
+0802eebc	,UNKNOWN	,	,	,
+0802ef84	,UNKNOWN	,	,	,
+0802ef9c	,UNKNOWN	,	,	,
+0802f0d0	,fdopen_g_	,symgrate	,/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a	,
+0802f114	,fdopen_g_	,symgrate	,/opt/symgrate2-archive/iar/EWARM7702/arm/lib/dl7Mx_tlfs.a	,
+0802f16a	,UNKNOWN	,	,	,
+0802f174	,UNKNOWN	,	,	,
+0802f1a0	,InitConfigFilesAccessStuffMaybe_g_	,nu	,based on nearby strings	,
+0802f21c	,UNKNOWN	,	,Only used by FUN08031140. Saves 0's maybe to an array at SRAM0370.	,
+0802f288	,SRAMwriterMaybe_g_	,nu	,based on associated addresses in OSMboxPostOpt	,
+0802f2d0	,UNKNOWN	,	,Only used by FUN0802fd98 (which does GPIO output init). Checks array at SRAM0394 for zeros and if it finds one sets SRAM0394+4=0.	,
+0802f300	,turnOffOrOnBitsAtTopFourBytesOfAddr_g_	,nu	,Do a bitwise AND or OR on top four bytes of input address.  Input addr is usually SRAM 20000394.	,
+0802f310	,UNKNOWN	,	,	,
+0802f344	,UNKNOWN	,	,	,
+0802f3b4	,UNKNOWN	,	,	,
+0802f46c	,UNKNOWN	,	,	,
+0802f490	,UNKNOWN	,	,	,
+0802f5a4	,UNKNOWN	,	,	,
+0802f5ac	,ADC_Config_p_	,	,Probably ADC_Config which appears to be slightly different for each user implementation [stm32f4xx_dsp_stdperiph_lib_um.chm p884:line00194] {Enables ADC1 & ADC2 (and does some other stuff).}	,"void ADC_Config(void)"
+0802f6fc	,UNKNOWN	,	,	,
+0802f750	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
+0802f78c	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
+0802f7d0	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
+0802f810	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
+0802f850	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
+0802f8ac	,GPIO_E_ODR10_ConfigureStuff_g_	,nu	,Similar to 0802fa00-0802faa8. Never gets called??	,
+0802f8cc	,returnSRAM3690	,nu	,	,
+0802f8d8	,UNKNOWN	,	,	,
+0802f8f0	,mightBeGPIO_x_ODRpreset0_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f910	,mightBeGPIO_x_ODRpreset1_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f930	,mightBeGPIO_x_ODRpreset2_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f950	,mightBeGPIO_x_ODRpreset3_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f970	,mightBeGPIO_x_ODRpreset4_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f98c	,mightBeGPIO_x_ODRpreset5_g_	,nu	,Guess based on functions 0802f9ac-0802fac4	,
+0802f9ac	,mightBeGPIO_x_ODRpresets_g_	,nu	,fxnTurnOffBits(turnOnThisPresetBit) - Loads up an array (its values probably represent GPIO_x_ODR's).  Then ensures some preset bits are off in SRAM0398 (with a bitwise AND).  Then then turns on the desired array bit in the preset (with a bitwise OR).	,
+0802fa00	,GPIO_G_ODR02_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value) - Bitwise AND 0 sets target ODR bit to 0. Bitwise OR 1 sets target bit to 1. 	,
+0802fa1c	,GPIO_G_ODR02_OutputIfInputIs0	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802fa38	,GPIO_G_ODR03_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802fa54	,GPIO_G_ODR05_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802fa70	,GPIO_F_ODR12_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802fa8c	,GPIO_D_ODR14_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802faa8	,GPIO_D_ODR15_OutputIfInputIs1	,nu	,Chooses to send/not-send output to the target ODR (depending on fxn input value)	,
+0802fac4	,GPIO_D_ODR13-11-10-9_SetOrResetSomeOrAll_nu_	,nu	,Sets/REset OutputDataRegisters 13 11 10 and 9 GPIOx_BSRR (BSy or BRy bits). 0x2e00=Bz13-11-10-9  0x2000=Bz13  0x800=Bz11   0x400=Bz10   0x200=Bz9 (I'm defining z as R or S - see the GPIOx_BSRR documentation) 	,
+0802fd98	,UNKNOWN	,	,	,
+0802fedc	,return1	,nu	,	,
+0802fee0	,Peripherals_RCB-RCC-PWR-FlashInterface_ConfigureStuff_g_	,nu	,Configure RCB-RCC-PWR-FlashInterface and start clocks	,
+0802ffd0	,GPIO_ABCDEFG_Init_g_	,	,Needs more research: sub_sub_ of main(). Also sets GPIO A&D to alternate functions. Reset-inits DEFGBCEG	,
+080301e8	,UNKNOWN	,	,	,
+08030248	,I2C_CheckEvent_Timeout	,fventuri/symgrate	,_ZN10JSAPI_GPIO9JiggleLowEjj ? /opt/symgrate2-archive/imagecraft/iccv9cortex/bin/ImageCraftCB/share/CodeBlocks/templates/wizard/icc-jsapi-templates/JumpStart_STM32F3xx-Template/Files/bin/Debug/JumpStart_STM32F3xx.elf	,
+08030286	,SLEEP_X_10	,fventuri	,	,
+080302bc	,UNKNOWN	,	,I2C stuff	,
+08030398	,UNKNOWN	,	,I2C stuff	,
+080304a8	,UNKNOWN	,	,I2C stuff	,
+080305f0	,UNKNOWN	,	,I2C stuff	,
+08030788	,UNKNOWN	,	,I2C stuff	,
+080308e4	,UNKNOWN	,	,I2C stuff	,
+08030aa0	,I2C_Reset_GCORE_g_	,nu	,Strings (spelling errors) seem to indicate this is part of GCORE	,
+08030ba0	,I2C_SetupI2C1onGPIOBp6p7_g_	,nu	,Starts clocks then sets GPIOB pins 6 & 7 to alternate functions (probably to I2C1_SCL & I2C1_SDA but needs more research [stm32f437vg p76]) and then initializes I2C1.	,
+08030c38	,I2C_SetupI2C2onGPIOBp10p11_g_	,nu	,Very similar to FUN08030ba0. Probably sets GPIOB pins 10 & 11 to I2C2_SCL & I2C2_SDA [stm32f437vg p76].	,
+08030cd0	,SPI/I2S_SetupI2SxTx_SPIxRx_onGPIOABCpins_g_	,nu	,Starts clocks. Then sets pins on GPIO-B-A-C to do SPIx/I2Sx operations [stm32f437vg.pdf p78]. Then does I2Sext stuff. Then sets I2S2ext & I2S3ext to tx and sets SPI2 & SPI3 to rx.	,
+08030ec4	,SPI/I2S_EnableDuplexMode_g_	,nu	,Enables DMA1 transfer complete interrupts then enables DMA1 streams (0 & 3-5) then enables SPI2-3 & I2S_ext2-3. I2S2_ext an I2S3_ext are used only in full-duplex mode. [rm0090 p900]	,
+08030f3c	,SPI/I2S_DisableDuplexModeProbably_g_	,nu	,Disables DMA1 streams (0 3-5) I2Sext2-3 & SPI2-3. Then sets GPIO? GPIOA & GPIOC (needs research) and disables clock.	,
+08030fe0	,NVIC_Configuration_g_	,nu	,Needs more research. Guess based on the known functions it calls but there is a good chance this is wrong and stm32f4xx_dsp_stdperiph_lib_um.chm p192:line140	,"void NVIC_Configuration(void)"
+08031048	,UNKNOWN	,	,	,
+08031070	,UNKNOWN	,	,	,
+08031098	,UNKNOWN	,	,	,
+080310ac	,UNKNOWN	,	,	,
+080310b4	,copyOneArrayToAnotherMaybe_g_	,nu	,	,
+08031108	,SLEEP_X_800	,nu	,Might also just be a wait timer for whatever time is input but I'm new to C programming	,
+08031140	,CheckIfBatteryFullYetMaybe_g_	,nu	,based on nearby strings	,
+080316a0	,enableAHB1PeriphClock_APB2PeriphClock_GPIO_g_	,nu	,	,
+08031754	,disableTIM2CR1-2_TIM3_TIM4_APB1PeriphClocks_g_	,nu	,	,
+08031790	,enableTIM2CR1_TIM3_TIM4_APB1PeriphClocks_g_	,nu	,	,
+080318e4	,waitForValueDMA2S7CR_g_	,nu	,	,
+080318f4	,setDMA2S7CR_g_	,nu	,	,
+08031950	,setDMA2S6CR_g_	,nu	,	,
+080319b4	,disableDMA2S6CR_DMA2S7CR_USART1DRnCR1-3_USART6DRnCR1-3_APB2PeriphClockCmd_g_	,nu	,	,
+080319fc	,USART1_to_GPIOA_pins9&10_COMPxOUT_transfer100dataItems_g_	,nu	,Enable RCC_APB2/AHB1 clocks. Config GPIOA pins 9&10 to be used as 'COMP1 OUT COMP2 OUT'. For USART1: Enable DMA tx/rx and enable USART. For DMA2.S5: Disable interrupts and proably clear all interrupt flags and maybe set peripheral-to-memory data transfer direction then set to transfer 100 data items (or more?) between GPIOA and USART1.	,
+08031b00	,UNKNOWN	,	,	,
+08031b4c	,UNKNOWN	,	,Looks similar to USART_Config	,
+08031d3c	,UNKNOWN	,	,	,
+08031e20	,UNKNOWN	,	,	,
+08031e88	,UNKNOWN	,	,	,
+08032108	,sub_TIM2_IRQHandler	,nu	,Only called by TIM2_IRQHandler:08032cd0_f_	,
+08032218	,storeInSRAM03d4arrayAt5_g_	,nu	,	,
+08032224	,storeInSRAM03d4arrayAt6_g_	,nu	,	,
+08032230	,storeInSRAM03d4arrayAt7_g_	,nu	,	,
+0803223c	,storeInSRAM03d4arrayAt8_g_	,nu	,	,
+08032248	,storeInSRAM03d4arrayAt9_g_	,nu	,	,
+08032254	,storeInSRAM03d4arrayAtD_E_F_g_	,nu	,	,
+08032264	,storeInSRAM03d4arrayAt10_g_	,nu	,	,
+08032270	,storeInSRAM1404_g_	,nu	,	,
+0803227c	,UNKNOWN	,	,	,
+08032294	,I2C3_EV_IRQHandler_f_	,startup_stm32f427xx.s	,	,
+08032478	,I2C3_ER_IRQHandler_f_	,startup_stm32f427xx.s	,	,
+08032540	,decSRAM142cIfFull_g_	,nu	,	,
+08032550	,getSRAM142c_g_	,nu	,	,
+0803255c	,UNKNOWN	,	,	,
+08032598	,UNKNOWN	,	,	,
+080325c0	,disableI2cAndInitGPIOmaybe_g_	,nu	,based on associated functions	,
+08032618	,enableClocks_GPIO_I2c_g_	,nu	,based on associated functions	,
+080326d4	,UNKNOWN	,	,	,
+080326e8	,UNKNOWN	,	,simple return? or pointer/data?  referenced by main()	,
+080326ec	,UNKNOWN	,	,	,
+08032730	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings	,
+080327ac	,flashmemRewriteMaybe_g_	,nu	,based on nearby strings	,
+08032864	,WorkWithCalibrationDataMaybe_g_	,nu	,based on nearby strings	,
+08032960	,main_f_	,startup_stm32f427xx.s	,Nu: Initializes stuff. Then prints out current firmware version info. Then checks battery. Then does TIM2 and I2C2 stuff. I believe the 'G-Core' stuff might happen inside FUN_0802afa4 while the STM32 waits in a loop at 08032a6a. If the loop exits at 08032a76 then the STM32 resets itself: GUI_GetBkColor disableTIM2CR1-2_TIM3_TIM4_APB1PeriphClocks disableDMA2S6CR_DMA2S7CR_USART1DRnCR1-3_USART6DRnCR1-3_APB2PeriphClockCmd saving something to flashmem and then disabling GPIOG.ODR0&1 GPIOE.ODR7&8 GPIOG.ODR11 GPIOE.ODR9&14 GPIOD.ODR4 GPIOF.ODR11 GPIOD.ODR3&2 GPIOE.ODR11 then it waits for GPIO.IDRs to be empty then turns off GPIOE.ODR11 again and then finally force-resets itself by sending VECTKEY with SYS RESET REQ to SCB.AIRCR.	,
+08032b84	,UNKNOWN	,	,	,
+08032ba0	,return-1_g_	,nu	,simple return function: 0xffffffff	,
+08032ba8	,UNKNOWN	,	,	,
+08032bb4	,return1_g_	,nu/ghidra	,simple return function: 0x01	,
+08032bb8	,return0_g_	,nu/ghidra	,simple return function: 0x00	,
+08032bbc	,UNKNOWN	,	,	,
+08032bf8	,SystemInit_f_	,startup_stm32f427xx.s	,Turns on FPU 11 & 10 and sets system clock to HSI (instead of HSE) [pm0214 p253 & rm0090 p161-7]. Also turns off PLL & HSE and their bypasses. Also resets RCC clock interrupt register twice and then sets clock configuration register to stack pointer.	,
+08032c44	,SystemCoreClockUpdate	,fventuri	,	,
+08032cb4	,TIM2_IRQHandler_f_	,startup_stm32f427xx.s	,	,
+08032cec	,TIM4_IRQHandler_f_	,startup_stm32f427xx.s	,	,
+08032d1c	,resetSysTickMaybe_g_	,nu	,Called by a fxn which never itself is called??? - The VAL register contains the current value of the SysTick counter.  Bits 23:0 - A write of any value clears the field to 0 and also clears the COUNTFLAG bit in the STK_CTRL register to 0. [PM0214 p249 4.5.3 SysTick current value register (STK_VAL)]	,
+08032d4c	,sysTickDaemonMaybe_g_	,nu	,Maybe forces settings to some pin/peripheral memory registers while watching other registers (based on bitwise and similarity to 0802f9ac-0802fac4). 	,
+08032d84	,Reset_Handler_f_	,startup_stm32f427xx.s	,	,
+08032dd4	,Default_Handler_f_	,startup_stm32f427xx.s	,	,
+08032dd8	,arm_fill_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08032e14	,arm_copy_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08032e74	,arm_min_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08032f44	,arm_cfft_radix8by2_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+080330e8	,arm_cfft_radix8by4_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+080335a4	,arm_cfft_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08033698	,arm_fir_interpolate_init_q31_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM3l_math.a	,
+080336d0	,arm_fir_interpolate_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08033b08	,arm_fir_init_q31_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08033b2c	,arm_fir_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08033ff4	,arm_fir_decimate_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+0803436c	,arm_biquad_cascade_df1_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+0803450c	,arm_cmplx_mag_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+080346dc	,arm_sin_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.5.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08034764	,arm_cos_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+080347e4	,arm_scale_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08034850	,arm_radix8_butterfly_f32_g_	,fventuri/symgrate	,/opt/symgrate2-archive/KeilPacks/ARM.CMSIS.4.4.0.pack/CMSIS/Lib/GCC/libarm_cortexM4lf_math.a	,
+08034e14	,SRAM3384_GetStuff_g_	,nu/ghidra	,returns value stored in SRAM (0x20003384)? (also see SRAM3384_StoreStuff_g_nu_ below)	,
+08034e20	,__libc_init_array_f_	,startup_stm32f427xx.s	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08034e68	,memcpy_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08034e7e	,memset_g_	,symgrate	,	,
+08034e8e	,__cvt_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08034f50	,__exponent_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/hard/libc_nano.a	,
+08034fb8	,_printf_float_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08035438	,_printf_common_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08035524	,_printf_i_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08035748	,_scanf_float_g_	,symgrate	,	,
+08035b0c	,iprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a	,
+08035b3c	,_puts_r_g_	,symgrate	,	,
+08035bf4	,printString_g_	,nu	,based on associated strings	,
+08035c04	,setvbuf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08035d60	,nanf_g_	,symgrate	,	,
+08035d6c	,sniprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08035dd4	,siprintf_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08035e14	,sulp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a	,
+08035e50	,_strtod_l_g_	,symgrate	,	,
+08036a38	,strptime_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08036a58	,_strtoul_l.isra.0_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08036b50	,strftime_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a	,
+08036b74	,__swbuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08036c18	,__swsetup_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08036cf4	,quorem_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08036e10	,_dtoa_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08037980	,__sflush_r_g_	,symgrate	,	,
+08037a8c	,_fflush_unlocked_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08037ae0	,std_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08037b34	,__sfmoreglue_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08037b60	,__sinit_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a	,
+08037bc0	,__sfp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08037c38	,_fwalk_reent_g_	,symgrate	,	,
+08037c74	,rshift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08037ce8	,__hexdig_fun_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08037d12	,__gethex_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038154	,L_shift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08038178	,__match_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+080381a0	,__hexnan_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080382c0	,UNKNOWN	,	,	,
+080382c6	,UNKNOWN	,	,	,
+080382cc	,_localeconv_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/ccs100/ccs/tools/compiler/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc_nano.a	,
+080382e8	,__swhatbuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038330	,__smakebuf_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+080383b0	,SRAM3384_StoreStuff_g_	,nu	,write _malloc_r result to SRAM (0x2000338 address)? (also see SRAM3384_GetStuff_g_nu_ above)	,
+080383c0	,__ascii_mbtowc_g_	,symgrate	,	,
+080383e4	,_Balloc_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+0803844c	,_Bfree_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+0803847a	,__multadd_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080384f0	,__s2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+0803856c	,__hi0bits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc.a	,
+080385aa	,__lo0bits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038608	,__i2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7-m/libc.a	,
+0803861a	,__multiply_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038748	,__pow5mult_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080387e4	,__lshift_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+0803888c	,__mcmp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080388c0	,__mdiff_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+0803897c	,__ulp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080389cc	,__b2d_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038a68	,__d2b_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038b06	,__ratio_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038b6c	,__copybits_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08038ba0	,__any_on_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08038be2	,_calloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08038c00	,_free_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038c9c	,_malloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08038d50	,__ssputs_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08038e04	,UNKNOWN	,	,	,
+08038ff4	,__sfputc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08039022	,__sfputs_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08039048	,UNKNOWN	,	,	,
+08039274	,_close_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08039294	,__sread_g_	,symgrate	,	,
+080392b6	,__swrite_g_	,symgrate	,	,
+080392ee	,__sseek_g_	,symgrate	,	,
+0803931a	,strncmp_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08039358	,_execve_r_g_	,symgrate	,	,
+0803939c	,_fstat_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080393c0	,_close_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080393e0	,_execve_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+08039404	,memmove_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_73_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08039436	,simpleReturn_g_	,nu	,Just returns?	,
+08039438	,simpleReturn_g_	,nu	,Just returns?	,
+0803943a	,_realloc_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7-m/libc_nano.a	,
+08039488	,_execve_r_g_	,fventuri/symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+080394ac	,_malloc_usable_size_r_g_	,symgrate	,	,
+080394bc	,UNKNOWN	,	,	,
+0803953c	,UNKNOWN	,	,	,
+080395bc	,UNKNOWN	,	,	,
+08039640	,UNKNOWN	,	,	,
+08039734	,UNKNOWN	,	,	,
+080399fc	,acosf_g_	,symgrate	,/opt/symgrate2-archive/ti/ccs610/ccsv6/tools/compiler/gcc-arm-none-eabi-4_8-2014q3/arm-none-eabi/lib/armv7-ar/thumb/fpu/libm.a	,
+08039a9c	,UNKNOWN	,	,	,
+08039c44	,UNKNOWN	,	,	,
+0803a1c4	,UNKNOWN	,	,	,
+0803a41c	,ANOTHER_SQRT_g_	,fventuri	,	,
+0803a424	,UNKNOWN	,	,	,
+0803a4e0	,arm_fir_f32_g_	,symgrate	,/opt/symgrate2-archive/KeilPacks/MediaTek.MTx.3.1.0.pack/driver/CMSIS/Lib/libarm_cortexM4lf_math.a	,
+0803a9e4	,__kernel_sinf_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a	,
+0803aa74	,return0	,nu	,	,
+0803aa78	,UNKNOWN	,	,	,
+0803aa86	,finitef_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_46_04_53/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/armv7e-m/fpu/libc.a	,
+0803aa9c	,UNKNOWN	,	,	,
+0803ab50	,scalbnf_g_	,symgrate	,/opt/symgrate2-archive/ti/bios_6_52_00_12/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a	,
+0803ac10	,nextafterf_g_	,symgrate	,also possibly copysignf	,
+0803ac28	,_init_g_	,symgrate	,	,
+0803ac34	,_initDuplicate_g_	,nu	,function is identical to 0803ac28	,
+	,	,	,	,
+	,	,	,	,
+Other Symbols	,	,	,	,
+0802cd2c	,ADC_CR2_CLEAR_MASK	,nu	,(dword)0xC0FFF7FD (used by ADC_Init & FUN_0802cce4) [stm32f4xx_dsp_stdperiph_lib_um.chm p225:line00136]	,
+0802cd54	,ADC_CR_CLEAR_MASK	,nu	,(dword)0xFFFC30E0 (used by ADC_CommonInit FUN_0802cd30)	,
+0802d080	,FLASH_KEY1	,nu	,[rm0090 p100] (dword)0x45670123 (used by FUN_0802d068 FLASH_Unlock)	,
+0802d084	,FLASH_KEY2	,nu	,[rm0090 p100] (dword)0xCDEF89AB (used by FUN_0802d068 FLASH_Unlock)	,
+0802d0a0	,FLASH_OPT_KEY1	,nu	,[rm0090 p100] (dword)0x08192A3B (used by FUN_0802d088 FLASH_OB_Unlock)	,
+0802d0a4	,FLASH_OPT_KEY2	,nu	,[rm0090 p100] (dword)0x4C5D6E7F (used by FUN_0802d088 FLASH_OB_Unlock)	,
+0802da18	,I2SCFGR_CLEAR_MASK	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p757] (word)0xF040	,
+0802da28	,HSI_VALUE	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p130] (dword)0x00F42400 (0x00F42400=0d16000000) (used by FUN_0802d950 I2S_Init)	,
+0802da98	,I2SCFGR_CLEAR_MASK	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p757] (word)0xF040	,
+0802dfac	,USART_CR1_CLEAR_MASK	,nu	,(word)0xE9F3 [stm32f4xx_dsp_stdperiph_lib_um.chm p854]	(used by USART_Init/FUN_0802def8),
+0803b264-0803b65c	,PointerTableX_g_	,nu	,One of a few massive tables of pointers(?) to STM32 reserved memory addresses(?)	,
+0803bb74-0803be58	,PointerTable0_g_	,nu	,One of a few massive tables of pointers(?) - 3c/3d/3e/3fxxxxxx addresses	,
+0803be5c-0803bf24	,PointerTable1_g_	,nu	,One of a few massive tables of pointers(?) - 3a-3fxxxxxx & a6-a8xxxxxx addresses	,
+0803bf28-08078404	,PointerTable2_g_	,nu	,One of a few massive tables of pointers(?) - 3fxxxxxx/bfxxxxxx addresses (and probably others)	,
+0807842c-08078c27	,PossiblePointerTable0_g_	,nu	,Not as sure about this one since possible pointer(?) 3c-3fxxxxxx addresses don't repeat as much.	,
+08078c28-08079024	,PossiblePointerTable1_g_	,nu	,	,
+08079028-08079424	,PossiblePointerTable2_g_	,nu	,to bfxxxxxx-bcxxxxxx addresses	,
+08079ee8	,_sidata_f_	,startup_stm32f427xx.s	,	,
+0807d43f	,end of X6100_BBFW_V1.1.6_221112001.img (when loaded at 0x08020000)	,nu	,	,
+20000000	,RAMaddresses_f_	,stm32f427zg.pdf#page=86	,	,
+20000000	,_sdata_f_	,startup_stm32f427xx.s	,	,
+20003558	,_edata_f_	,startup_stm32f427xx.s	,	,
+20003558	,_sbss_f_	,startup_stm32f427xx.s	,	,
+20005910	,LargeArrayMaybe_SRAM5910_g_	,nu	,Used by a few different functions	,
+2000e20c	,_ebss_f_	,startup_stm32f427xx.s	,	,
+20030000	,_estack_f_	,startup_stm32f427xx.s	,	,
