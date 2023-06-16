@@ -1,0 +1,17 @@
+# build the zip file
+gradle
+
+# install the zip file
+unzip -q -o -d ~/.ghidra/.ghidra_10.3_PUBLIC/Extensions dist/ghidra_10.3_PUBLIC_$(date +%Y%m%d)_STM32Loader.zip
+
+
+
+MyFIDHashCurrentFunction.java> Running...
+MyFIDHashCurrentFunction.java> Number of CodeUnits: 25
+MyFIDHashCurrentFunction.java> FID Hash for Reset_Handler at 08032d84:  FH: c1108350dfdbdd3 (22) +5 XH: 6c5c108b013e99f9
+MyFIDHashCurrentFunction.java> Finished!
+
+compilerSpec: ARM/little/32/Cortex:default
+first instruction: ldr r0,[0x08032dbc]
+second instruction: mov sp,r0
+resetHandlerInterestingAddresses: {}
