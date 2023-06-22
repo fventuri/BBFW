@@ -6,11 +6,25 @@ STM32Loader is a Ghidra loader that allows to load STM32F4 binary firmware files
 
 ### Building STM32Loader
 
-This step requires the build tool 'gradle'.
+This step requires openjdk (17+), Ghidra (10.3+), and the build tool 'gradle' (8.1.1+).
 
-```
-cd STM32Loader
-gradle
+```bash
+export GHIDRA_INSTALL_DIR=/opt/ghidra_10.3.1_PUBLIC # set this to your ghidra installation directory
+
+sudo apt-get install openjdk-19-jdk # install JDK 19 and set it to default jdk
+	sudo update-java-alternatives --set java-1.19*
+
+cd ~/Downloads # install gradle 8.1.1
+	wget https://downloads.gradle.org/distributions/gradle-8.1.1-all.zip
+	7z x gradle-8.1.1-all.zip
+	sudo mv gradle-8.1.1/ /opt/.
+	echo 'export PATH=/opt/gradle-8.1.1/bin:$PATH' | sudo tee -a ~/.bashrc
+	export PATH=/opt/gradle-8.1.1/bin:$PATH
+
+git clone https://github.com/fventuri/BBFW.git # compile our ghidra loader
+	cd BBFW/ghidra-stm32/extensions/STM32Loader
+	gradle
+ 	sudo mv dist/ghidra_10.3.1_PUBLIC_20230621_STM32Loader.zip /opt/
 ```
 
 If the gradle command is successful, there should be an installation file in the 'dist' directory called something like ghidra_<ghidra_version>_<YYYYMMDD>_STM32Loader.zip
