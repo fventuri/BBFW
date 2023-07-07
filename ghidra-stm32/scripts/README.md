@@ -1,8 +1,10 @@
 # Ghidra SMT32 scripts - Ghidra scripts for the STM32 platform
 
-- CreateSTM32GDTArchive is a headless script that creates a Ghidra Data Type (GDT) archive from the STM32F4 Standard Peripherals Library [STSW-STM32065](https://www.st.com/en/embedded-software/stsw-stm32065.html)
+## CreateSTM32GDTArchive
 
-## How to run CreateSTM32GDTArchive
+CreateSTM32GDTArchive is a headless script that creates a Ghidra Data Type (GDT) archive from the STM32F4 Standard Peripherals Library [STSW-STM32065](https://www.st.com/en/embedded-software/stsw-stm32065.html)
+
+### How to run CreateSTM32GDTArchive
 
 The script CreateSTM32GDTArchive requires a few configuration settings (like the path of the STM32 Standard Peripheral Library installation), that can provided either via its properties file or via command line parameters.
 
@@ -28,4 +30,43 @@ git clone https://github.com/fventuri/BBFW.git # create the .gdt file
 	sudo $GHIDRA_HOME/support/analyzeHeadless /tmp tempproj -preScript CreateSTM32GDTArchive.py output_dir=/opt -deleteProject
 ```
 
-The sctipt will create a GDT file called <mcu_variant>.gdt in the 'output_dir' directory.
+The script will create a GDT file called <mcu_variant>.gdt in the 'output_dir' directory.
+
+
+## AssignFunctionNamesAndTypes
+
+AssignFunctionNamesAndTypes is a headless script that analyzes an STM32 binary and assigns function and names based on a template csv file ('functions.csv'). It uses address and a combination of functionId (i.e. full hash and specific hash) or reference functions plus offsets (and specific hash matching) for smaller functions for which a functionId is not available.
+
+### Arguments
+
+- `gdt_archives`: comma separated list of GDT archives that contain the typedef's of the identified functions
+- `functions`: name of the CSV file containing the function identification information and other function useful information
+- `output_functions`: flag to indicate if an output functions file should be created; this file contains all the correct information (hashes and reference functions) for a specific firmware file; it can be used as the starting point to create another functions CSV file for a different release of the same firmware
+- `append_suffix`: flag to indicate if the suffix should be appended to the function name (for instance instead of `Reset_Handler`, the name would be `Reset_handler_f`)
+
+### How to run AssignFunctionNamesAndTypes
+
+The script AssignFunctionNamesAndTypes requires a few configuration settings (like the path of the template CSV file describing functions of the flag to indicate if the suffix should be appended to the function name), that can provided either via its properties file or via command line parameters.
+
+- To run it passing the settings from the command line:
+```
+$GHIDRA_HOME/support/analyzeHeadless /tmp bbfw-20221112 -import X6100_BBFW_V1.1.6_221112001.bin -loader STM32Loader -postScript AssignFunctionNamesAndTypes.py gdt_archives=STM32F427_437xx.gdt functions=functions.csv output_functions
+```
+
+#### Other examples:
+```
+$GHIDRA_HOME/support/analyzeHeadless . 20211207001 -import X6100_BBFW_20211207001.bin -loader STM32Loader -postScript AssignFunctionNamesAndTypes.py gdt_archives=STM32F427_437xx.gdt functions=functions.csv
+```
+
+```
+$GHIDRA_HOME/support/analyzeHeadless . 20220410001 -import X6100_BBFW_20220410001.bin -loader STM32Loader -postScript AssignFunctionNamesAndTypes.py gdt_archives=STM32F427_437xx.gdt functions=functions.csv
+```
+
+```
+$GHIDRA_HOME/support/analyzeHeadless . 20221102001 -import X6100_BBFW_V1.1.6_221102001.bin -loader STM32Loader -postScript AssignFunctionNamesAndTypes.py gdt_archives=STM32F427_437xx.gdt functions=functions.csv
+```
+
+```
+$GHIDRA_HOME/support/analyzeHeadless . 20221112001 -import X6100_BBFW_V1.1.6_221112001.bin -loader STM32Loader -postScript AssignFunctionNamesAndTypes.py gdt_archives=STM32F427_437xx.gdt functions=functions.csv
+```
+
