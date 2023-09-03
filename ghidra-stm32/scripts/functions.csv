@@ -1,0 +1,18 @@
+# name,address,full hash/reference,specific hash,suffix,gdt,source library,source file,who found it,notes
+#
+# IVT Handlers
+Reset_Handler,0x08032d84,0xc1108350dfdbdd3,0x6c5c108b013e99f9,f,STM32F427_437xx,STM32Cube_FW_F4_V1.27.1,startup_stm32f427xx.s,,a multiline comment\nline two\nline three
+DMA1_Stream3_IRQHandler,0x08023bf0,0xde2e22baddd98fa9,0x829997ee1fd4d09b,f,STM32F427_437xx,GCORE,???,,
+#
+# System functions
+SystemInit,0x08032bf8,0xd39fe65cf775cbc6,0xf87cf0819a4d4054,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,system_stm32f4xx.c,,
+SystemCoreClockUpdate,0x08032c44,0x60f4431650ef6ed8,0x1de224a6591135aa,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,system_stm32f4xx.c,,
+#
+# GPIO functions
+GPIO_Init,0x0802d4c8,0xb72821b72ddba0f3,0x3705508845b379c9,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,stm32f4xx_gpio.c,,
+GPIO_PinAFConfig,0x0802d56c,0x4b41951be7b22569,0xa44cc4ab1af63633,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,stm32f4xx_gpio.c,,
+GPIO_ResetBits,0x0802d568,GPIO_PinAFConfig-4,0x7dd246e8f605c276,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,stm32f4xx_gpio.c,,
+GPIO_SetBits,0x0802d564,GPIO_PinAFConfig-8,0xdc3b586cecc883df,f,STM32F427_437xx,STM32F4xx_DSP_StdPeriph_Lib_V1.9.0,stm32f4xx_gpio.c,,
+#
+# Misc stuff
+main,0x08032960,0xa4a9247ef6c832b4,0xa069d7dd2649ced6,f,,GCORE,???,,

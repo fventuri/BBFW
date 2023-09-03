@@ -48,6 +48,7 @@ import ghidra.program.model.scalar.Scalar;
 import ghidra.program.model.symbol.Namespace;
 import ghidra.program.model.symbol.SourceType;
 import ghidra.program.model.symbol.SymbolTable;
+import ghidra.util.Msg;
 import ghidra.util.exception.CancelledException;
 import ghidra.util.exception.InvalidInputException;
 import ghidra.util.task.TaskMonitor;
@@ -376,17 +377,46 @@ public class STM32Loader extends AbstractProgramWrapperLoader {
         // data block
         memory.split(textBlock, sidata);
         MemoryBlock dataBlock = memory.getBlock(sidata);
+        Address sdata = api.toAddr(resetHandlerUsefulInfo.get("_sdata"));
+        api.createLabel(sdata, "_sdata", true);
+        Address edata = api.toAddr(resetHandlerUsefulInfo.get("_edata"));
+        api.createLabel(sdata, "_edata", true);
+        long dataBlockSize = edata.getOffset() - sdata.getOffset();
+        long dataBlockCurrentSize = dataBlock.getSize();
+        if (dataBlockCurrentSize < dataBlockSize) {
+            log.appendMsg("data block size is too small - expected at least " + dataBlockSize + " - got " + dataBlockCurrentSize);
+            return;
+        } else if (dataBlockCurrentSize > dataBlockSize) {
+            String message = String.format("Firmware has extra %d bytes after end of data (edata) - .ccmram segment perhaps?", dataBlockCurrentSize - dataBlockSize);
+            Msg.info(STM32Loader.class, message);
+            log.appendMsg(message);
+            //Address tail = api.toAddr(sidata.getOffset() + dataBlockSize);
+            //memory.split(dataBlock, tail);
+            //MemoryBlock tailBlock = memory.getBlock(tail);
+            //tailBlock.setName("UNKNOWN");
+            //api.createFragment("UNKNOWN", tailBlock.getStart(), tailBlock.getSize());
+            Address siccmram = api.toAddr(sidata.getOffset() + dataBlockSize);
+            memory.split(dataBlock, siccmram);
+            MemoryBlock ccmramBlock = memory.getBlock(siccmram);
+            ccmramBlock.setName(".ccmram?");
+            ccmramBlock.setRead(true);
+            ccmramBlock.setWrite(true);
+            ccmramBlock.setExecute(false);
+            //ccmramBlock.setVolatile(true);
+            Address sccmram = api.toAddr(0x10000000L);
+            api.createLabel(sdata, "_sccmram", true);
+            memory.moveBlock(ccmramBlock, sccmram, monitor);
+            api.createFragment(".ccmram?", ccmramBlock.getStart(), ccmramBlock.getSize());
+            Address eccmram = sccmram.add(ccmramBlock.getSize());
+            api.createLabel(eccmram, "_eccmram", true);
+        }
         dataBlock.setName(".data");
         dataBlock.setRead(true);
         dataBlock.setWrite(true);
         dataBlock.setExecute(false);
         //dataBlock.setVolatile(true);
-        Address sdata = api.toAddr(resetHandlerUsefulInfo.get("_sdata"));
-        api.createLabel(sdata, "_sdata", true);
         memory.moveBlock(dataBlock, sdata, monitor);
-        Address edata = api.toAddr(resetHandlerUsefulInfo.get("_edata"));
-        api.createLabel(sdata, "_edata", true);
-        api.createFragment(".data", sdata, edata.getOffset() - sdata.getOffset());
+        api.createFragment(".data", dataBlock.getStart(), dataBlock.getSize());
 
         // bss block (initialized to 0)
         Address sbss = api.toAddr(resetHandlerUsefulInfo.get("_sbss"));
