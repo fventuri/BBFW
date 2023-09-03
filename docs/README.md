@@ -27,6 +27,7 @@ _Another perspective on using SVD Loader to set up memory maps for STM32 firmwar
  - [Decompiling ARM raw binary with Ghidra](https://www.youtube.com/watch?v=YjLFoiBdWpE)
 _Decompiling/reversing ARM machine code to C code_
  - [ARM Cortex-M Startup Code](https://www.iotality.com/arm-cortex-m4-startup-code/)
+ - [PCM Hacking](https://youtube.com/playlist?list=PLZHdOHIf39LroVXUwkNYhJLHi1V0oag4E&si=DpuQjOllyoaqIIvq) _Workflow for decompiling barmental firmware functions_
 
 ### One reversing workflow
  1. Identify processor via hardware components on PCB's, googling model numbers, and obtaining manufacturer documentation. Also obtain decrypted firmware for main processor.
@@ -35,21 +36,5 @@ _Decompiling/reversing ARM machine code to C code_
  4. Read everything you can find on reversing this kind of firmware to look for clues: Virtual address table is in the documentation? Great, fill that into your database.  The second pointer at the beginning of this kind of firmware usually leads to main()? Great! Look for main().
  5. Search for strings and see which functions reference those strings.  Start giving those functions guessed names based on the strings they use (for example: Are there a lot of battery strings being referenced by the function?  Name the function 'batteryStuff_g_').  Try to be as specific as you can but don't get hung up on details yet.
  6. If a bunch of strings (or string pointers) are in the same area, look at other things there to see if the disassembler might have misidentified things.  See if you can changed any unidentified bytes into part of the rest of the string so that the pointer reports the string instead of just a memory address.
-
-_for example_
-```asm
-        xxxxxxxx 0d              ??         0Dh
-        xxxxxxxx 08              ??         08h
-        xxxxxxxx 65 72 72        ds         "error: no data found.\r"
-                 6f 72 3a 
-                 67 3a 20 ...
-```
-_might actually be supposed to point to_
-```asm
-        xxxxxxxx 0d 08 65        ds         "\r\berror: no data found.\r"
-                 72 72 6f 
-                 72 3a 67 ...
-```
-
  7. Start looking for any unknown simple or commonly-used functions and name them with guesses about what they do.  For identified functions, see what clusters of functions they call and see if you can give those functions name-guesses based on what the parent function does and what variables are being passed into those.  See if the compiler put a bunch of similar functions (from the math or graphics library for example) all clumped together near the same memory addresses so that you can guess at what other unknown functions in those memory ranges might do.  Hopefully a foggy picture of what is basically going on in the firmware will start to emerge.  Write down your guesses/findings in a text file (address, structure_name_g_, your name, notes) so that others can collaborate.
  8. Further into reversing, start testing guesses by inputting values into an emulator of the firmware.
