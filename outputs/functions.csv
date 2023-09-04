@@ -257,8 +257,8 @@
 0802f46c	,UNKNOWN	,	,	,
 0802f490	,UNKNOWN	,	,	,
 0802f5a4	,UNKNOWN	,	,	,
-0802f5ac	,ADC_Config_p_	,	,Probably ADC_Config which appears to be slightly different for each user implementation [stm32f4xx_dsp_stdperiph_lib_um.chm p884:line00194] {Enables ADC1 & ADC2 (and does some other stuff).}	,"void ADC_Config(void)"
-0802f6fc	,UNKNOWN	,	,	,
+0802f5ac	,GCORE_ADC_Config_p_	,	,Probably ADC_Config which appears to be slightly different for each user implementation [stm32f4xx_dsp_stdperiph_lib_um.chm p884:line00194] {Enables ADC1 & ADC2 (and does some other stuff).}	,"void ADC_Config(void)"
+0802f6fc	,GCORE_DAC_Ch1-2_Config_Off_g_	,Based on functions and layout. Very similar to DAC_Ch2_SineWaveConfig() example from [stm32f4xx_dsp_stdperiph_lib_um.chm:p00178]	,nu	,
 0802f750	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
 0802f78c	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
 0802f7d0	,UNKNOWN	,	,Functions 0802f750-0802f850 look similar.  Deals with SRAM and I2cDataOperationsStuff	,
