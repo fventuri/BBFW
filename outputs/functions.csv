@@ -284,7 +284,7 @@
 0802fac4	,GPIO_D_ODR13-11-10-9_SetOrResetSomeOrAll_nu_	,nu	,Sets/REset OutputDataRegisters 13 11 10 and 9 GPIOx_BSRR (BSy or BRy bits). 0x2e00=Bz13-11-10-9  0x2000=Bz13  0x800=Bz11   0x400=Bz10   0x200=Bz9 (I'm defining z as R or S - see the GPIOx_BSRR documentation) 	,
 0802fd98	,UNKNOWN	,	,	,
 0802fedc	,return1	,nu	,	,
-0802fee0	,Peripherals_RCB-RCC-PWR-FlashInterface_ConfigureStuff_g_	,nu	,Configure RCB-RCC-PWR-FlashInterface and start clocks	,
+0802fee0	,GCORE_SystemInit_with_SetSysClock	,nu	,[stm32f4xx_dsp_stdperiph_lib_um.chm p184:00342 & p184:00476] NOTE: This custom SystemInit() function has SetSysClock() embedded within it!	,
 0802ffd0	,GCORE_GPIO_ABCDEFG_Init_g_	,	,Needs more research: sub_sub_ of main(). Also sets GPIO A&D to alternate functions. Reset-inits DEFGBCEG	,
 080301e8	,GCORE_InitsAndConfigs_g_	,nu	,Based on called functions	,
 08030248	,I2C_CheckEvent_Timeout	,fventuri/symgrate	,_ZN10JSAPI_GPIO9JiggleLowEjj ? /opt/symgrate2-archive/imagecraft/iccv9cortex/bin/ImageCraftCB/share/CodeBlocks/templates/wizard/icc-jsapi-templates/JumpStart_STM32F3xx-Template/Files/bin/Debug/JumpStart_STM32F3xx.elf	,
