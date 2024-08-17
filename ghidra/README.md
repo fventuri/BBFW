@@ -1,4 +1,7 @@
-## Importing/running Ghidra scripts
+## Getting started reversing the X6100 BBFW in Ghidra
+New users can try running [gettingstarted.sh](gettingstarted.sh) to install Ghidra, decrypt the BBFW.xgf, and import known data types (.gdt) & symbols that we have discovered so far.
+
+## Importing/running community Ghidra scripts
  1. Download the ghidra scripts you want to use (they should be .java or .py files). Some useful scripts for reversing STM32 firmware include [symgrate](https://github.com/jamchamb/symgrate-ghidra) (to match function signatures) & [SVD Loader](https://github.com/leveldown-security/SVD-Loader-Ghidra) (to create the STM32's memory map in Ghidra).
  2. Go to Ghidra > Code Browser (dragon button) > "Window" (tab) > "Script Manager" (green circle 'play' button) > "Manage Script Directories" (three horizontal lines button) > "Display file chooser to add bundles to list" (green plus button).
  3. Now find/select the directory holding your ghidra script, press "OK", then close the window.
