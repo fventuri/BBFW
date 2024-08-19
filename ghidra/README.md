@@ -9,7 +9,6 @@ New users can try running [gettingstarted.sh](gettingstarted.sh) to install Ghid
 
 ## Creating Ghidra Data Type files from C source on Linux
  - [Ghidra: Data Type Manager / Archives and Parse C Source... (resolve function signatures)](https://www.youtube.com/watch?v=u15-r5Erfnw) (mich/0x6d696368, 04/2019) _Importing data types into Ghidra from sourcecode header files_
- - You can download this pre-made [.gdt file](stm32f4xxStdPeriph_and_stm32f427xxCubeF4.gdt) if you like. Or you can make one yourself by following the steps below:
  1. Find a sourcecode header file that you believe could contain functions included in your firmware (for example: [stm32f427xx.h](https://github.com/STMicroelectronics/STM32CubeF4/blob/master/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h).  If there are other 'include' directories in this file's repo then just clone the whole repo (in case your header file depends on any other files in the repo). 
  2. Go to Ghidra > Code Browser (dragon button) > "File" (tab) > "Parse C Source..." > "Save profile to new name" (small floppy disk button) > Enter a name for your new Parse C Source profile (mine was 'stm32f427xx').  Now add your .h file and try to "Parse to File..."
  3. If everything went well, you should now have a .gdt file that you can import into the Ghidra Code Browser "Data Type Manager" window (bottom-left).  But Ghidra sucks at parsing C files, so it will probably crash.
