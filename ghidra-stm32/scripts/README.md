@@ -19,7 +19,7 @@ $GHIDRA_HOME/support/analyzeHeadless /tmp tempproj -preScript CreateSTM32GDTArch
 ```
 - Here is an example:
 ```bash
-GHIDRA_HOME=/opt/ghidra_10.3.1_PUBLIC # set this to your ghidra installation directory
+GHIDRA_HOME=$(find /*/ghidra*/ghidraRun | grep -P -o "(.*)(?=/ghidraRun)") #GHIDRA_HOME=/opt/ghidra_10.3.3_PUBLIC - (set this to your ghidra installation directory)
 
 cd ~/Downloads # download standard peripheral library
 	wget https://web.archive.org/web/20230622050333/https://www.st.com/content/ccc/resource/technical/software/firmware/group1/42/1a/98/f3/14/b4/4b/81/stsw-stm32065_v1-9-0/files/stsw-stm32065_v1-9-0.zip/jcr:content/translations/en.stsw-stm32065_v1-9-0.zip
@@ -27,11 +27,34 @@ cd ~/Downloads # download standard peripheral library
 
 git clone https://github.com/fventuri/BBFW.git # create the .gdt file
 	cd BBFW/ghidra-stm32/scripts/
-	sudo $GHIDRA_HOME/support/analyzeHeadless /tmp tempproj -preScript CreateSTM32GDTArchive.py output_dir=/opt -deleteProject
+	sudo $GHIDRA_HOME/support/analyzeHeadless /tmp tempproj -preScript CreateSTM32GDTArchive.py output_dir=$GHIDRA_HOME -deleteProject
 ```
 
 The script will create a GDT file called <mcu_variant>.gdt in the 'output_dir' directory.
 
+---
+If the script encounters an error with `fatal error: stdint.h: No such file or directory`, you can work around this error by creating `.../STM32F4xx_DSP_StdPeriph_Lib_V1.9.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stdint.h` with these file contents:
+```C
+/* minumum needed to parse STM32F4 Standard Peripheral Library headers
+ * Franco Venturi - Tue Feb 21 10:14:54 PM EST 2023
+ */
+
+/* fundamental types */
+typedef long unsigned int uint32_t;
+typedef long int int32_t;
+typedef unsigned char uint8_t;
+typedef short unsigned int uint16_t;
+typedef long long unsigned int uint64_t;
+typedef short int int16_t;
+typedef signed char int8_t;
+
+/* aliases */
+typedef int16_t s16;
+typedef int8_t s8;
+
+/* other useful defines */
+#define __STATIC_INLINE static inline
+```
 
 ## AssignFunctionNamesAndTypes
 

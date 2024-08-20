@@ -13,7 +13,9 @@ I used [PlatformIO](https://platformio.org) to develop and build the bootloader.
 
 Install it [via your preferred method](https://platformio.org/install/ide).
 
-Once PlatformIO is installed, go to the root of the bootloader directory (where this file, as well as the platformio.ini file is located), and execute ``` pio run ```
+You may also need to link the `pio` executables to your bash commandline by restarting bash or with [this guide](https://docs.platformio.org/en/latest/core/installation/shell-commands.html#unix-and-unix-like)
+
+Once PlatformIO is installed, open a bash terminal and go to the root of the bootloader directory (where this file, as well as the platformio.ini file is located). Then execute ``` pio run ```
 PlatformIO will then download the tools required to compile the bootloader, compile it, then spit out the file as ``` .pio/build/armstrap_eagle1024/firmware.elf ```.
 
 ## Flashing the bootloader
